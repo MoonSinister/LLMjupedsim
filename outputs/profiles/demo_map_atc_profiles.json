@@ -1,0 +1,4233 @@
+{
+  "profiles": [
+    {
+      "profile_id": "atc_9190700",
+      "source": "atc",
+      "atc_person_id": "9190700",
+      "role": "commuter",
+      "subtype": "hurried_passenger",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 34.65s, mean speed 0.902m/s, slow ratio 0.004, regions region_2.",
+      "motivation": "Follow an indoor movement pattern associated with region_2, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_2"
+      ],
+      "personal_variation": "avoids unnecessary stops",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 918,
+        "duration_seconds": 34.65,
+        "path_length_m": 34.02,
+        "displacement_m": 26.81,
+        "mean_speed_m_s": 0.902,
+        "slow_ratio": 0.004,
+        "tortuosity": 1.269,
+        "top_regions": [
+          [
+            "region_2",
+            21
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9190700: start=(26.64,-15.11), via=region_2, end=(7.48,3.64)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9190802",
+      "source": "atc",
+      "atc_person_id": "9190802",
+      "role": "visitor",
+      "subtype": "meeting_visitor",
+      "attribute": "You behave like a visitor inferred from ATC indoor tracking: duration 175.68s, mean speed 0.63m/s, slow ratio 0.051, regions unlabeled indoor areas.",
+      "motivation": "Explore visible landmarks or public areas before choosing an exit.",
+      "preferences": [
+        "visible landmarks",
+        "shops",
+        "restaurant",
+        "stairs",
+        "escalator"
+      ],
+      "personal_variation": "chooses a less crowded-looking alternative when plausible",
+      "desired_speed_mps": 0.8,
+      "default_wait_seconds": 27,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 4546,
+        "duration_seconds": 175.68,
+        "path_length_m": 135.63,
+        "displacement_m": 16.81,
+        "mean_speed_m_s": 0.63,
+        "slow_ratio": 0.051,
+        "tortuosity": 8.07,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9190802: start=(-22.34,1.69), via=unlabeled path, end=(-7.00,8.55)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9194800",
+      "source": "atc",
+      "atc_person_id": "9194800",
+      "role": "visitor",
+      "subtype": "first_time_visitor",
+      "attribute": "You behave like a visitor inferred from ATC indoor tracking: duration 14.64s, mean speed 0.606m/s, slow ratio 0.043, regions unlabeled indoor areas.",
+      "motivation": "Explore visible landmarks or public areas before choosing an exit.",
+      "preferences": [
+        "visible landmarks",
+        "shops",
+        "restaurant",
+        "stairs",
+        "escalator"
+      ],
+      "personal_variation": "may pause briefly at the intended destination",
+      "desired_speed_mps": 0.8,
+      "default_wait_seconds": 26,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 392,
+        "duration_seconds": 14.64,
+        "path_length_m": 11.9,
+        "displacement_m": 0.15,
+        "mean_speed_m_s": 0.606,
+        "slow_ratio": 0.043,
+        "tortuosity": 80.418,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9194800: start=(3.66,-0.32), via=unlabeled path, end=(3.80,-0.36)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9200100",
+      "source": "atc",
+      "atc_person_id": "9200100",
+      "role": "visitor",
+      "subtype": "meeting_visitor",
+      "attribute": "You behave like a visitor inferred from ATC indoor tracking: duration 52.2s, mean speed 0.594m/s, slow ratio 0.026, regions unlabeled indoor areas.",
+      "motivation": "Explore visible landmarks or public areas before choosing an exit.",
+      "preferences": [
+        "visible landmarks",
+        "shops",
+        "restaurant",
+        "stairs",
+        "escalator"
+      ],
+      "personal_variation": "avoids unnecessary stops",
+      "desired_speed_mps": 0.8,
+      "default_wait_seconds": 23,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1375,
+        "duration_seconds": 52.2,
+        "path_length_m": 24.68,
+        "displacement_m": 0.28,
+        "mean_speed_m_s": 0.594,
+        "slow_ratio": 0.026,
+        "tortuosity": 88.691,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9200100: start=(42.02,-17.56), via=unlabeled path, end=(41.94,-17.82)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9203800",
+      "source": "atc",
+      "atc_person_id": "9203800",
+      "role": "visitor",
+      "subtype": "lost_visitor",
+      "attribute": "You behave like a visitor inferred from ATC indoor tracking: duration 17.14s, mean speed 0.576m/s, slow ratio 0.104, regions unlabeled indoor areas.",
+      "motivation": "Explore visible landmarks or public areas before choosing an exit.",
+      "preferences": [
+        "visible landmarks",
+        "shops",
+        "restaurant",
+        "stairs",
+        "escalator"
+      ],
+      "personal_variation": "accepts a small detour for interesting places",
+      "desired_speed_mps": 0.8,
+      "default_wait_seconds": 34,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 451,
+        "duration_seconds": 17.14,
+        "path_length_m": 14.05,
+        "displacement_m": 0.22,
+        "mean_speed_m_s": 0.576,
+        "slow_ratio": 0.104,
+        "tortuosity": 63.004,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9203800: start=(3.46,-0.65), via=unlabeled path, end=(3.45,-0.43)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9204300",
+      "source": "atc",
+      "atc_person_id": "9204300",
+      "role": "commuter",
+      "subtype": "hurried_passenger",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 45.82s, mean speed 0.967m/s, slow ratio 0.0, regions region_1.",
+      "motivation": "Follow an indoor movement pattern associated with region_1, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_1"
+      ],
+      "personal_variation": "chooses a less crowded-looking alternative when plausible",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1189,
+        "duration_seconds": 45.82,
+        "path_length_m": 44.82,
+        "displacement_m": 33.04,
+        "mean_speed_m_s": 0.967,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.357,
+        "top_regions": [
+          [
+            "region_1",
+            51
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9204300: start=(-14.49,-10.08), via=region_1, end=(-12.48,22.89)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9204100",
+      "source": "atc",
+      "atc_person_id": "9204100",
+      "role": "commuter",
+      "subtype": "train_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 22.88s, mean speed 1.175m/s, slow ratio 0.018, regions unlabeled indoor areas.",
+      "motivation": "Move efficiently through the building toward transit, parking, or a direct exit.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor"
+      ],
+      "personal_variation": "may pause briefly at the intended destination",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 568,
+        "duration_seconds": 22.88,
+        "path_length_m": 30.72,
+        "displacement_m": 27.17,
+        "mean_speed_m_s": 1.175,
+        "slow_ratio": 0.018,
+        "tortuosity": 1.131,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9204100: start=(44.90,-18.49), via=unlabeled path, end=(18.62,-11.60)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9205300",
+      "source": "atc",
+      "atc_person_id": "9205300",
+      "role": "commuter",
+      "subtype": "parking_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 33.47s, mean speed 1.38m/s, slow ratio 0.0, regions region_2.",
+      "motivation": "Follow an indoor movement pattern associated with region_2, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_2"
+      ],
+      "personal_variation": "prefers a different stop than nearby agents with the same role",
+      "desired_speed_mps": 1.38,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 863,
+        "duration_seconds": 33.47,
+        "path_length_m": 52.22,
+        "displacement_m": 43.69,
+        "mean_speed_m_s": 1.38,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.195,
+        "top_regions": [
+          [
+            "region_2",
+            82
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9205300: start=(41.65,-18.46), via=region_2, end=(6.04,6.86)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9205400",
+      "source": "atc",
+      "atc_person_id": "9205400",
+      "role": "commuter",
+      "subtype": "parking_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 17.24s, mean speed 1.516m/s, slow ratio 0.0, regions unlabeled indoor areas.",
+      "motivation": "Move efficiently through the building toward transit, parking, or a direct exit.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor"
+      ],
+      "personal_variation": "prefers a different stop than nearby agents with the same role",
+      "desired_speed_mps": 1.52,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 449,
+        "duration_seconds": 17.24,
+        "path_length_m": 29.8,
+        "displacement_m": 26.43,
+        "mean_speed_m_s": 1.516,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.128,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9205400: start=(-14.18,13.45), via=unlabeled path, end=(-34.10,-3.92)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9210300",
+      "source": "atc",
+      "atc_person_id": "9210300",
+      "role": "commuter",
+      "subtype": "train_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 27.67s, mean speed 1.533m/s, slow ratio 0.0, regions unlabeled indoor areas.",
+      "motivation": "Move efficiently through the building toward transit, parking, or a direct exit.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor"
+      ],
+      "personal_variation": "prefers shortest plausible path",
+      "desired_speed_mps": 1.53,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 715,
+        "duration_seconds": 27.67,
+        "path_length_m": 48.43,
+        "displacement_m": 42.99,
+        "mean_speed_m_s": 1.533,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.127,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9210300: start=(33.83,-17.82), via=unlabeled path, end=(-3.82,2.93)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9210400",
+      "source": "atc",
+      "atc_person_id": "9210400",
+      "role": "commuter",
+      "subtype": "parking_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 17.38s, mean speed 1.144m/s, slow ratio 0.0, regions region_2.",
+      "motivation": "Follow an indoor movement pattern associated with region_2, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_2"
+      ],
+      "personal_variation": "prefers a different stop than nearby agents with the same role",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 450,
+        "duration_seconds": 17.38,
+        "path_length_m": 23.28,
+        "displacement_m": 19.77,
+        "mean_speed_m_s": 1.144,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.178,
+        "top_regions": [
+          [
+            "region_2",
+            55
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9210400: start=(17.42,-11.19), via=region_2, end=(6.82,5.49)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9210800",
+      "source": "atc",
+      "atc_person_id": "9210800",
+      "role": "commuter",
+      "subtype": "train_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 67.44s, mean speed 1.288m/s, slow ratio 0.0, regions region_6.",
+      "motivation": "Follow an indoor movement pattern associated with region_6, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_6"
+      ],
+      "personal_variation": "may pause briefly at the intended destination",
+      "desired_speed_mps": 1.29,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1718,
+        "duration_seconds": 67.44,
+        "path_length_m": 101.94,
+        "displacement_m": 84.77,
+        "mean_speed_m_s": 1.288,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.203,
+        "top_regions": [
+          [
+            "region_6",
+            37
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9210800: start=(42.08,-20.83), via=region_6, end=(-40.65,-2.36)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9210900",
+      "source": "atc",
+      "atc_person_id": "9210900",
+      "role": "commuter",
+      "subtype": "train_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 51.44s, mean speed 1.606m/s, slow ratio 0.0, regions region_6.",
+      "motivation": "Follow an indoor movement pattern associated with region_6, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_6"
+      ],
+      "personal_variation": "may pause briefly at the intended destination",
+      "desired_speed_mps": 1.61,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1309,
+        "duration_seconds": 51.44,
+        "path_length_m": 93.98,
+        "displacement_m": 81.3,
+        "mean_speed_m_s": 1.606,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.156,
+        "top_regions": [
+          [
+            "region_6",
+            32
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9210900: start=(40.16,-17.78), via=region_6, end=(-39.79,-3.03)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9211000",
+      "source": "atc",
+      "atc_person_id": "9211000",
+      "role": "commuter",
+      "subtype": "hurried_passenger",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 43.51s, mean speed 1.176m/s, slow ratio 0.0, regions region_2.",
+      "motivation": "Follow an indoor movement pattern associated with region_2, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_2"
+      ],
+      "personal_variation": "avoids unnecessary stops",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1107,
+        "duration_seconds": 43.51,
+        "path_length_m": 59.0,
+        "displacement_m": 50.41,
+        "mean_speed_m_s": 1.176,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.171,
+        "top_regions": [
+          [
+            "region_2",
+            85
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9211000: start=(39.17,-20.60), via=region_2, end=(0.19,11.37)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9211600",
+      "source": "atc",
+      "atc_person_id": "9211600",
+      "role": "commuter",
+      "subtype": "train_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 25.67s, mean speed 1.363m/s, slow ratio 0.0, regions region_2.",
+      "motivation": "Follow an indoor movement pattern associated with region_2, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_2"
+      ],
+      "personal_variation": "prefers shortest plausible path",
+      "desired_speed_mps": 1.36,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 661,
+        "duration_seconds": 25.67,
+        "path_length_m": 40.15,
+        "displacement_m": 34.23,
+        "mean_speed_m_s": 1.363,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.173,
+        "top_regions": [
+          [
+            "region_2",
+            22
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9211600: start=(28.87,-17.17), via=region_2, end=(3.53,5.85)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9211800",
+      "source": "atc",
+      "atc_person_id": "9211800",
+      "role": "commuter",
+      "subtype": "parking_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 60.85s, mean speed 1.26m/s, slow ratio 0.0, regions unlabeled indoor areas.",
+      "motivation": "Move efficiently through the building toward transit, parking, or a direct exit.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor"
+      ],
+      "personal_variation": "accepts a small detour for interesting places",
+      "desired_speed_mps": 1.26,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1504,
+        "duration_seconds": 60.85,
+        "path_length_m": 88.36,
+        "displacement_m": 77.35,
+        "mean_speed_m_s": 1.26,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.142,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9211800: start=(42.72,-18.58), via=unlabeled path, end=(-31.57,2.98)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9213100",
+      "source": "atc",
+      "atc_person_id": "9213100",
+      "role": "commuter",
+      "subtype": "train_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 22.57s, mean speed 1.495m/s, slow ratio 0.0, regions region_6.",
+      "motivation": "Follow an indoor movement pattern associated with region_6, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_6"
+      ],
+      "personal_variation": "may pause briefly at the intended destination",
+      "desired_speed_mps": 1.5,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 570,
+        "duration_seconds": 22.57,
+        "path_length_m": 38.69,
+        "displacement_m": 34.25,
+        "mean_speed_m_s": 1.495,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.13,
+        "top_regions": [
+          [
+            "region_6",
+            36
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9213100: start=(-6.38,2.85), via=region_6, end=(-40.27,-2.08)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9213300",
+      "source": "atc",
+      "atc_person_id": "9213300",
+      "role": "commuter",
+      "subtype": "hurried_passenger",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 65.96s, mean speed 1.308m/s, slow ratio 0.0, regions region_6.",
+      "motivation": "Follow an indoor movement pattern associated with region_6, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_6"
+      ],
+      "personal_variation": "avoids unnecessary stops",
+      "desired_speed_mps": 1.31,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1667,
+        "duration_seconds": 65.96,
+        "path_length_m": 98.49,
+        "displacement_m": 84.01,
+        "mean_speed_m_s": 1.308,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.172,
+        "top_regions": [
+          [
+            "region_6",
+            40
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9213300: start=(42.25,-18.29), via=region_6, end=(-40.22,-2.32)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9213600",
+      "source": "atc",
+      "atc_person_id": "9213600",
+      "role": "commuter",
+      "subtype": "hurried_passenger",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 35.04s, mean speed 1.253m/s, slow ratio 0.0, regions region_2.",
+      "motivation": "Follow an indoor movement pattern associated with region_2, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_2"
+      ],
+      "personal_variation": "chooses a less crowded-looking alternative when plausible",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 887,
+        "duration_seconds": 35.04,
+        "path_length_m": 50.19,
+        "displacement_m": 42.84,
+        "mean_speed_m_s": 1.253,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.172,
+        "top_regions": [
+          [
+            "region_2",
+            58
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9213600: start=(41.97,-18.32), via=region_2, end=(6.60,5.86)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9213700",
+      "source": "atc",
+      "atc_person_id": "9213700",
+      "role": "commuter",
+      "subtype": "train_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 34.97s, mean speed 1.221m/s, slow ratio 0.0, regions region_2.",
+      "motivation": "Follow an indoor movement pattern associated with region_2, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_2"
+      ],
+      "personal_variation": "prefers shortest plausible path",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 884,
+        "duration_seconds": 34.97,
+        "path_length_m": 48.26,
+        "displacement_m": 41.43,
+        "mean_speed_m_s": 1.221,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.165,
+        "top_regions": [
+          [
+            "region_2",
+            17
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9213700: start=(42.94,-18.33), via=region_2, end=(7.97,3.89)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9214300",
+      "source": "atc",
+      "atc_person_id": "9214300",
+      "role": "commuter",
+      "subtype": "train_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 35.97s, mean speed 1.285m/s, slow ratio 0.0, regions region_2.",
+      "motivation": "Follow an indoor movement pattern associated with region_2, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_2"
+      ],
+      "personal_variation": "may pause briefly at the intended destination",
+      "desired_speed_mps": 1.28,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 907,
+        "duration_seconds": 35.97,
+        "path_length_m": 50.62,
+        "displacement_m": 44.68,
+        "mean_speed_m_s": 1.285,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.133,
+        "top_regions": [
+          [
+            "region_2",
+            79
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9214300: start=(41.90,-20.55), via=region_2, end=(6.41,6.60)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9214301",
+      "source": "atc",
+      "atc_person_id": "9214301",
+      "role": "commuter",
+      "subtype": "train_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 49.84s, mean speed 0.937m/s, slow ratio 0.0, regions region_2, region_9.",
+      "motivation": "Follow an indoor movement pattern associated with region_2, region_9, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_2",
+        "region_9"
+      ],
+      "personal_variation": "may pause briefly at the intended destination",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1256,
+        "duration_seconds": 49.84,
+        "path_length_m": 53.37,
+        "displacement_m": 43.08,
+        "mean_speed_m_s": 0.937,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.239,
+        "top_regions": [
+          [
+            "region_2",
+            73
+          ],
+          [
+            "region_9",
+            7
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9214301: start=(42.52,-18.22), via=region_2 -> region_9, end=(6.66,5.66)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9214302",
+      "source": "atc",
+      "atc_person_id": "9214302",
+      "role": "commuter",
+      "subtype": "parking_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 20.62s, mean speed 1.314m/s, slow ratio 0.0, regions region_6, region_1.",
+      "motivation": "Follow an indoor movement pattern associated with region_6, region_1, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_6",
+        "region_1"
+      ],
+      "personal_variation": "accepts a small detour for interesting places",
+      "desired_speed_mps": 1.31,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 521,
+        "duration_seconds": 20.62,
+        "path_length_m": 31.04,
+        "displacement_m": 27.35,
+        "mean_speed_m_s": 1.314,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.135,
+        "top_regions": [
+          [
+            "region_6",
+            40
+          ],
+          [
+            "region_1",
+            10
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9214302: start=(-16.80,12.61), via=region_6 -> region_1, end=(-39.19,-3.10)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9215100",
+      "source": "atc",
+      "atc_person_id": "9215100",
+      "role": "commuter",
+      "subtype": "train_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 54.78s, mean speed 1.029m/s, slow ratio 0.001, regions region_2.",
+      "motivation": "Follow an indoor movement pattern associated with region_2, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_2"
+      ],
+      "personal_variation": "may pause briefly at the intended destination",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1387,
+        "duration_seconds": 54.78,
+        "path_length_m": 63.75,
+        "displacement_m": 47.86,
+        "mean_speed_m_s": 1.029,
+        "slow_ratio": 0.001,
+        "tortuosity": 1.332,
+        "top_regions": [
+          [
+            "region_2",
+            63
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9215100: start=(46.27,-20.00), via=region_2, end=(5.56,5.16)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9215300",
+      "source": "atc",
+      "atc_person_id": "9215300",
+      "role": "commuter",
+      "subtype": "hurried_passenger",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 35.97s, mean speed 1.384m/s, slow ratio 0.0, regions region_2.",
+      "motivation": "Follow an indoor movement pattern associated with region_2, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_2"
+      ],
+      "personal_variation": "chooses a less crowded-looking alternative when plausible",
+      "desired_speed_mps": 1.38,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 914,
+        "duration_seconds": 35.97,
+        "path_length_m": 55.04,
+        "displacement_m": 47.54,
+        "mean_speed_m_s": 1.384,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.158,
+        "top_regions": [
+          [
+            "region_2",
+            57
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9215300: start=(43.54,-23.11), via=region_2, end=(6.58,6.79)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9215800",
+      "source": "atc",
+      "atc_person_id": "9215800",
+      "role": "commuter",
+      "subtype": "hurried_passenger",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 78.58s, mean speed 1.106m/s, slow ratio 0.0, regions region_6.",
+      "motivation": "Follow an indoor movement pattern associated with region_6, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_6"
+      ],
+      "personal_variation": "chooses a less crowded-looking alternative when plausible",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 2035,
+        "duration_seconds": 78.58,
+        "path_length_m": 104.31,
+        "displacement_m": 83.06,
+        "mean_speed_m_s": 1.106,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.256,
+        "top_regions": [
+          [
+            "region_6",
+            38
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9215800: start=(42.29,-18.42), via=region_6, end=(-39.28,-2.72)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9220400",
+      "source": "atc",
+      "atc_person_id": "9220400",
+      "role": "commuter",
+      "subtype": "train_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 75.28s, mean speed 1.151m/s, slow ratio 0.0, regions region_6.",
+      "motivation": "Follow an indoor movement pattern associated with region_6, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_6"
+      ],
+      "personal_variation": "prefers shortest plausible path",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1955,
+        "duration_seconds": 75.28,
+        "path_length_m": 98.74,
+        "displacement_m": 82.68,
+        "mean_speed_m_s": 1.151,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.194,
+        "top_regions": [
+          [
+            "region_6",
+            46
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9220400: start=(42.89,-18.17), via=region_6, end=(-38.49,-3.57)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9221200",
+      "source": "atc",
+      "atc_person_id": "9221200",
+      "role": "commuter",
+      "subtype": "train_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 36.98s, mean speed 1.15m/s, slow ratio 0.0, regions region_2.",
+      "motivation": "Follow an indoor movement pattern associated with region_2, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_2"
+      ],
+      "personal_variation": "may pause briefly at the intended destination",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 938,
+        "duration_seconds": 36.98,
+        "path_length_m": 50.94,
+        "displacement_m": 41.22,
+        "mean_speed_m_s": 1.15,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.236,
+        "top_regions": [
+          [
+            "region_2",
+            27
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9221200: start=(42.43,-18.09), via=region_2, end=(7.56,3.89)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9221700",
+      "source": "atc",
+      "atc_person_id": "9221700",
+      "role": "commuter",
+      "subtype": "train_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 36.12s, mean speed 1.307m/s, slow ratio 0.0, regions region_2.",
+      "motivation": "Follow an indoor movement pattern associated with region_2, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_2"
+      ],
+      "personal_variation": "may pause briefly at the intended destination",
+      "desired_speed_mps": 1.31,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 920,
+        "duration_seconds": 36.12,
+        "path_length_m": 52.73,
+        "displacement_m": 47.46,
+        "mean_speed_m_s": 1.307,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.111,
+        "top_regions": [
+          [
+            "region_2",
+            17
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9221700: start=(46.19,-23.89), via=region_2, end=(7.38,3.42)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9222200",
+      "source": "atc",
+      "atc_person_id": "9222200",
+      "role": "visitor",
+      "subtype": "first_time_visitor",
+      "attribute": "You behave like a visitor inferred from ATC indoor tracking: duration 111.31s, mean speed 1.098m/s, slow ratio 0.004, regions unlabeled indoor areas.",
+      "motivation": "Explore visible landmarks or public areas before choosing an exit.",
+      "preferences": [
+        "visible landmarks",
+        "shops",
+        "restaurant",
+        "stairs",
+        "escalator"
+      ],
+      "personal_variation": "prefers shortest plausible path",
+      "desired_speed_mps": 1.1,
+      "default_wait_seconds": 20,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 2901,
+        "duration_seconds": 111.31,
+        "path_length_m": 136.03,
+        "displacement_m": 25.05,
+        "mean_speed_m_s": 1.098,
+        "slow_ratio": 0.004,
+        "tortuosity": 5.43,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9222200: start=(-12.57,13.46), via=unlabeled path, end=(8.70,0.22)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9222400",
+      "source": "atc",
+      "atc_person_id": "9222400",
+      "role": "commuter",
+      "subtype": "train_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 26.6s, mean speed 1.423m/s, slow ratio 0.0, regions region_1, region_6.",
+      "motivation": "Follow an indoor movement pattern associated with region_1, region_6, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_1",
+        "region_6"
+      ],
+      "personal_variation": "prefers shortest plausible path",
+      "desired_speed_mps": 1.42,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 677,
+        "duration_seconds": 26.6,
+        "path_length_m": 41.89,
+        "displacement_m": 38.92,
+        "mean_speed_m_s": 1.423,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.076,
+        "top_regions": [
+          [
+            "region_1",
+            63
+          ],
+          [
+            "region_6",
+            6
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9222400: start=(-37.17,-2.87), via=region_1 -> region_6, end=(-4.24,17.86)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9223400",
+      "source": "atc",
+      "atc_person_id": "9223400",
+      "role": "commuter",
+      "subtype": "train_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 18.05s, mean speed 2.523m/s, slow ratio 0.0, regions region_2.",
+      "motivation": "Follow an indoor movement pattern associated with region_2, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_2"
+      ],
+      "personal_variation": "prefers shortest plausible path",
+      "desired_speed_mps": 1.8,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 465,
+        "duration_seconds": 18.05,
+        "path_length_m": 47.04,
+        "displacement_m": 42.3,
+        "mean_speed_m_s": 2.523,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.112,
+        "top_regions": [
+          [
+            "region_2",
+            40
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9223400: start=(40.14,-18.23), via=region_2, end=(5.05,5.39)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9225900",
+      "source": "atc",
+      "atc_person_id": "9225900",
+      "role": "commuter",
+      "subtype": "train_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 49.25s, mean speed 1.152m/s, slow ratio 0.0, regions unlabeled indoor areas.",
+      "motivation": "Move efficiently through the building toward transit, parking, or a direct exit.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor"
+      ],
+      "personal_variation": "may pause briefly at the intended destination",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1315,
+        "duration_seconds": 49.25,
+        "path_length_m": 67.35,
+        "displacement_m": 54.81,
+        "mean_speed_m_s": 1.152,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.229,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9225900: start=(44.79,-23.04), via=unlabeled path, end=(-3.69,2.54)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9231400",
+      "source": "atc",
+      "atc_person_id": "9231400",
+      "role": "commuter",
+      "subtype": "hurried_passenger",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 33.74s, mean speed 1.134m/s, slow ratio 0.002, regions region_1.",
+      "motivation": "Follow an indoor movement pattern associated with region_1, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_1"
+      ],
+      "personal_variation": "avoids unnecessary stops",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 903,
+        "duration_seconds": 33.74,
+        "path_length_m": 42.41,
+        "displacement_m": 37.53,
+        "mean_speed_m_s": 1.134,
+        "slow_ratio": 0.002,
+        "tortuosity": 1.13,
+        "top_regions": [
+          [
+            "region_1",
+            67
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9231400: start=(-36.56,-2.76), via=region_1, end=(-6.72,20.01)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9231501",
+      "source": "atc",
+      "atc_person_id": "9231501",
+      "role": "visitor",
+      "subtype": "lost_visitor",
+      "attribute": "You behave like a visitor inferred from ATC indoor tracking: duration 24.27s, mean speed 0.772m/s, slow ratio 0.002, regions unlabeled indoor areas.",
+      "motivation": "Explore visible landmarks or public areas before choosing an exit.",
+      "preferences": [
+        "visible landmarks",
+        "shops",
+        "restaurant",
+        "stairs",
+        "escalator"
+      ],
+      "personal_variation": "accepts a small detour for interesting places",
+      "desired_speed_mps": 0.8,
+      "default_wait_seconds": 20,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 655,
+        "duration_seconds": 24.27,
+        "path_length_m": 17.93,
+        "displacement_m": 3.2,
+        "mean_speed_m_s": 0.772,
+        "slow_ratio": 0.002,
+        "tortuosity": 5.596,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9231501: start=(45.81,-18.93), via=unlabeled path, end=(43.10,-17.21)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9232100",
+      "source": "atc",
+      "atc_person_id": "9232100",
+      "role": "commuter",
+      "subtype": "hurried_passenger",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 26.41s, mean speed 1.048m/s, slow ratio 0.0, regions region_1.",
+      "motivation": "Follow an indoor movement pattern associated with region_1, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_1"
+      ],
+      "personal_variation": "avoids unnecessary stops",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 697,
+        "duration_seconds": 26.41,
+        "path_length_m": 31.38,
+        "displacement_m": 28.69,
+        "mean_speed_m_s": 1.048,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.094,
+        "top_regions": [
+          [
+            "region_1",
+            83
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9232100: start=(-30.72,2.48), via=region_1, end=(-7.87,19.83)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9234700",
+      "source": "atc",
+      "atc_person_id": "9234700",
+      "role": "commuter",
+      "subtype": "train_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 57.6s, mean speed 1.555m/s, slow ratio 0.0, regions region_6.",
+      "motivation": "Follow an indoor movement pattern associated with region_6, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_6"
+      ],
+      "personal_variation": "may pause briefly at the intended destination",
+      "desired_speed_mps": 1.56,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1520,
+        "duration_seconds": 57.6,
+        "path_length_m": 101.07,
+        "displacement_m": 84.03,
+        "mean_speed_m_s": 1.555,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.203,
+        "top_regions": [
+          [
+            "region_6",
+            39
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9234700: start=(43.52,-22.80), via=region_6, end=(-38.36,-3.96)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9234800",
+      "source": "atc",
+      "atc_person_id": "9234800",
+      "role": "commuter",
+      "subtype": "parking_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 27.11s, mean speed 0.912m/s, slow ratio 0.013, regions region_2.",
+      "motivation": "Follow an indoor movement pattern associated with region_2, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_2"
+      ],
+      "personal_variation": "prefers a different stop than nearby agents with the same role",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 717,
+        "duration_seconds": 27.11,
+        "path_length_m": 28.52,
+        "displacement_m": 21.36,
+        "mean_speed_m_s": 0.912,
+        "slow_ratio": 0.013,
+        "tortuosity": 1.335,
+        "top_regions": [
+          [
+            "region_2",
+            15
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9234800: start=(4.40,4.80), via=region_2, end=(16.34,-12.91)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9235000",
+      "source": "atc",
+      "atc_person_id": "9235000",
+      "role": "commuter",
+      "subtype": "parking_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 30.27s, mean speed 1.099m/s, slow ratio 0.0, regions region_6.",
+      "motivation": "Follow an indoor movement pattern associated with region_6, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_6"
+      ],
+      "personal_variation": "prefers a different stop than nearby agents with the same role",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 760,
+        "duration_seconds": 30.27,
+        "path_length_m": 39.87,
+        "displacement_m": 32.55,
+        "mean_speed_m_s": 1.099,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.225,
+        "top_regions": [
+          [
+            "region_6",
+            45
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9235000: start=(-6.33,2.87), via=region_6, end=(-38.20,-3.73)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9240000",
+      "source": "atc",
+      "atc_person_id": "9240000",
+      "role": "commuter",
+      "subtype": "train_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 33.78s, mean speed 1.219m/s, slow ratio 0.0, regions region_2.",
+      "motivation": "Follow an indoor movement pattern associated with region_2, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_2"
+      ],
+      "personal_variation": "prefers shortest plausible path",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 903,
+        "duration_seconds": 33.78,
+        "path_length_m": 48.22,
+        "displacement_m": 41.24,
+        "mean_speed_m_s": 1.219,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.169,
+        "top_regions": [
+          [
+            "region_2",
+            18
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9240000: start=(42.47,-18.24), via=region_2, end=(7.50,3.60)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9240100",
+      "source": "atc",
+      "atc_person_id": "9240100",
+      "role": "commuter",
+      "subtype": "parking_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 21.56s, mean speed 1.304m/s, slow ratio 0.0, regions region_6, region_1.",
+      "motivation": "Follow an indoor movement pattern associated with region_6, region_1, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_6",
+        "region_1"
+      ],
+      "personal_variation": "prefers a different stop than nearby agents with the same role",
+      "desired_speed_mps": 1.3,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 586,
+        "duration_seconds": 21.56,
+        "path_length_m": 31.3,
+        "displacement_m": 28.02,
+        "mean_speed_m_s": 1.304,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.117,
+        "top_regions": [
+          [
+            "region_6",
+            38
+          ],
+          [
+            "region_1",
+            11
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9240100: start=(-16.97,12.70), via=region_6 -> region_1, end=(-40.77,-2.09)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9240200",
+      "source": "atc",
+      "atc_person_id": "9240200",
+      "role": "commuter",
+      "subtype": "hurried_passenger",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 88.09s, mean speed 1.027m/s, slow ratio 0.0, regions unlabeled indoor areas.",
+      "motivation": "Move efficiently through the building toward transit, parking, or a direct exit.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor"
+      ],
+      "personal_variation": "avoids unnecessary stops",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 2323,
+        "duration_seconds": 88.09,
+        "path_length_m": 99.85,
+        "displacement_m": 82.26,
+        "mean_speed_m_s": 1.027,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.214,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9240200: start=(-36.52,-2.25), via=unlabeled path, end=(44.23,-17.96)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9241700",
+      "source": "atc",
+      "atc_person_id": "9241700",
+      "role": "commuter",
+      "subtype": "hurried_passenger",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 52.25s, mean speed 1.627m/s, slow ratio 0.0, regions region_6.",
+      "motivation": "Follow an indoor movement pattern associated with region_6, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_6"
+      ],
+      "personal_variation": "avoids unnecessary stops",
+      "desired_speed_mps": 1.63,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1349,
+        "duration_seconds": 52.25,
+        "path_length_m": 101.62,
+        "displacement_m": 84.6,
+        "mean_speed_m_s": 1.627,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.201,
+        "top_regions": [
+          [
+            "region_6",
+            29
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9241700: start=(42.39,-18.35), via=region_6, end=(-40.67,-2.29)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9241900",
+      "source": "atc",
+      "atc_person_id": "9241900",
+      "role": "commuter",
+      "subtype": "train_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 29.23s, mean speed 0.925m/s, slow ratio 0.0, regions region_8.",
+      "motivation": "Follow an indoor movement pattern associated with region_8, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_8"
+      ],
+      "personal_variation": "may pause briefly at the intended destination",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 763,
+        "duration_seconds": 29.23,
+        "path_length_m": 30.27,
+        "displacement_m": 24.72,
+        "mean_speed_m_s": 0.925,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.224,
+        "top_regions": [
+          [
+            "region_8",
+            8
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9241900: start=(19.52,-14.93), via=region_8, end=(44.07,-17.86)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9242001",
+      "source": "atc",
+      "atc_person_id": "9242001",
+      "role": "commuter",
+      "subtype": "train_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 83.18s, mean speed 0.933m/s, slow ratio 0.0, regions region_7.",
+      "motivation": "Follow an indoor movement pattern associated with region_7, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_7"
+      ],
+      "personal_variation": "prefers shortest plausible path",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 2120,
+        "duration_seconds": 83.18,
+        "path_length_m": 80.07,
+        "displacement_m": 57.68,
+        "mean_speed_m_s": 0.933,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.388,
+        "top_regions": [
+          [
+            "region_7",
+            115
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9242001: start=(45.08,-18.37), via=region_7, end=(-12.30,-12.55)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9243800",
+      "source": "atc",
+      "atc_person_id": "9243800",
+      "role": "commuter",
+      "subtype": "hurried_passenger",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 29.42s, mean speed 1.182m/s, slow ratio 0.0, regions region_1.",
+      "motivation": "Follow an indoor movement pattern associated with region_1, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_1"
+      ],
+      "personal_variation": "avoids unnecessary stops",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 756,
+        "duration_seconds": 29.42,
+        "path_length_m": 38.8,
+        "displacement_m": 36.23,
+        "mean_speed_m_s": 1.182,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.071,
+        "top_regions": [
+          [
+            "region_1",
+            53
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9243800: start=(-36.39,-2.41), via=region_1, end=(-7.57,19.55)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9244600",
+      "source": "atc",
+      "atc_person_id": "9244600",
+      "role": "commuter",
+      "subtype": "hurried_passenger",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 27.45s, mean speed 1.308m/s, slow ratio 0.0, regions region_1.",
+      "motivation": "Follow an indoor movement pattern associated with region_1, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_1"
+      ],
+      "personal_variation": "chooses a less crowded-looking alternative when plausible",
+      "desired_speed_mps": 1.31,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 712,
+        "duration_seconds": 27.45,
+        "path_length_m": 37.36,
+        "displacement_m": 35.36,
+        "mean_speed_m_s": 1.308,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.056,
+        "top_regions": [
+          [
+            "region_1",
+            46
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9244600: start=(-35.81,-1.99), via=region_1, end=(-7.72,19.48)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9245100",
+      "source": "atc",
+      "atc_person_id": "9245100",
+      "role": "commuter",
+      "subtype": "parking_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 33.43s, mean speed 1.384m/s, slow ratio 0.0, regions region_2.",
+      "motivation": "Follow an indoor movement pattern associated with region_2, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_2"
+      ],
+      "personal_variation": "accepts a small detour for interesting places",
+      "desired_speed_mps": 1.38,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 880,
+        "duration_seconds": 33.43,
+        "path_length_m": 52.45,
+        "displacement_m": 43.58,
+        "mean_speed_m_s": 1.384,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.204,
+        "top_regions": [
+          [
+            "region_2",
+            18
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9245100: start=(45.22,-18.23), via=region_2, end=(7.63,3.82)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9245101",
+      "source": "atc",
+      "atc_person_id": "9245101",
+      "role": "commuter",
+      "subtype": "hurried_passenger",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 24.66s, mean speed 1.416m/s, slow ratio 0.0, regions region_1.",
+      "motivation": "Follow an indoor movement pattern associated with region_1, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_1"
+      ],
+      "personal_variation": "avoids unnecessary stops",
+      "desired_speed_mps": 1.42,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 642,
+        "duration_seconds": 24.66,
+        "path_length_m": 38.18,
+        "displacement_m": 35.69,
+        "mean_speed_m_s": 1.416,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.07,
+        "top_regions": [
+          [
+            "region_1",
+            46
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9245101: start=(-36.12,-2.23), via=region_1, end=(-7.67,19.31)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9245102",
+      "source": "atc",
+      "atc_person_id": "9245102",
+      "role": "commuter",
+      "subtype": "parking_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 25.38s, mean speed 1.648m/s, slow ratio 0.0, regions unlabeled indoor areas.",
+      "motivation": "Move efficiently through the building toward transit, parking, or a direct exit.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor"
+      ],
+      "personal_variation": "accepts a small detour for interesting places",
+      "desired_speed_mps": 1.65,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 664,
+        "duration_seconds": 25.38,
+        "path_length_m": 46.42,
+        "displacement_m": 39.7,
+        "mean_speed_m_s": 1.648,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.169,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9245102: start=(41.24,-18.39), via=unlabeled path, end=(7.67,2.81)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9245600",
+      "source": "atc",
+      "atc_person_id": "9245600",
+      "role": "commuter",
+      "subtype": "parking_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 54.34s, mean speed 1.595m/s, slow ratio 0.0, regions region_6.",
+      "motivation": "Follow an indoor movement pattern associated with region_6, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_6"
+      ],
+      "personal_variation": "prefers a different stop than nearby agents with the same role",
+      "desired_speed_mps": 1.6,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1407,
+        "duration_seconds": 54.34,
+        "path_length_m": 98.2,
+        "displacement_m": 84.16,
+        "mean_speed_m_s": 1.595,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.167,
+        "top_regions": [
+          [
+            "region_6",
+            31
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9245600: start=(42.36,-18.30), via=region_6, end=(-40.29,-2.46)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9245700",
+      "source": "atc",
+      "atc_person_id": "9245700",
+      "role": "commuter",
+      "subtype": "parking_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 35.16s, mean speed 1.372m/s, slow ratio 0.0, regions unlabeled indoor areas.",
+      "motivation": "Move efficiently through the building toward transit, parking, or a direct exit.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor"
+      ],
+      "personal_variation": "accepts a small detour for interesting places",
+      "desired_speed_mps": 1.37,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 924,
+        "duration_seconds": 35.16,
+        "path_length_m": 57.9,
+        "displacement_m": 50.56,
+        "mean_speed_m_s": 1.372,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.145,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9245700: start=(42.47,-18.32), via=unlabeled path, end=(-4.16,1.23)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9250000",
+      "source": "atc",
+      "atc_person_id": "9250000",
+      "role": "commuter",
+      "subtype": "parking_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 58.05s, mean speed 1.486m/s, slow ratio 0.0, regions region_6.",
+      "motivation": "Follow an indoor movement pattern associated with region_6, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_6"
+      ],
+      "personal_variation": "accepts a small detour for interesting places",
+      "desired_speed_mps": 1.49,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1501,
+        "duration_seconds": 58.05,
+        "path_length_m": 100.13,
+        "displacement_m": 83.51,
+        "mean_speed_m_s": 1.486,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.199,
+        "top_regions": [
+          [
+            "region_6",
+            37
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9250000: start=(42.33,-18.30), via=region_6, end=(-39.73,-2.85)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9250300",
+      "source": "atc",
+      "atc_person_id": "9250300",
+      "role": "commuter",
+      "subtype": "train_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 77.47s, mean speed 0.922m/s, slow ratio 0.019, regions unlabeled indoor areas.",
+      "motivation": "Move efficiently through the building toward transit, parking, or a direct exit.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor"
+      ],
+      "personal_variation": "may pause briefly at the intended destination",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 2020,
+        "duration_seconds": 77.47,
+        "path_length_m": 75.29,
+        "displacement_m": 42.26,
+        "mean_speed_m_s": 0.922,
+        "slow_ratio": 0.019,
+        "tortuosity": 1.782,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9250300: start=(43.39,-20.03), via=unlabeled path, end=(8.11,3.23)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9250301",
+      "source": "atc",
+      "atc_person_id": "9250301",
+      "role": "visitor",
+      "subtype": "lost_visitor",
+      "attribute": "You behave like a visitor inferred from ATC indoor tracking: duration 43.25s, mean speed 0.644m/s, slow ratio 0.052, regions unlabeled indoor areas.",
+      "motivation": "Explore visible landmarks or public areas before choosing an exit.",
+      "preferences": [
+        "visible landmarks",
+        "shops",
+        "restaurant",
+        "stairs",
+        "escalator"
+      ],
+      "personal_variation": "prefers a different stop than nearby agents with the same role",
+      "desired_speed_mps": 0.8,
+      "default_wait_seconds": 27,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1127,
+        "duration_seconds": 43.25,
+        "path_length_m": 39.02,
+        "displacement_m": 1.26,
+        "mean_speed_m_s": 0.644,
+        "slow_ratio": 0.052,
+        "tortuosity": 30.947,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9250301: start=(39.12,-20.36), via=unlabeled path, end=(37.94,-20.81)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9250900",
+      "source": "atc",
+      "atc_person_id": "9250900",
+      "role": "commuter",
+      "subtype": "train_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 34.76s, mean speed 1.478m/s, slow ratio 0.0, regions region_2.",
+      "motivation": "Follow an indoor movement pattern associated with region_2, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_2"
+      ],
+      "personal_variation": "prefers shortest plausible path",
+      "desired_speed_mps": 1.48,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 916,
+        "duration_seconds": 34.76,
+        "path_length_m": 58.21,
+        "displacement_m": 51.32,
+        "mean_speed_m_s": 1.478,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.134,
+        "top_regions": [
+          [
+            "region_2",
+            80
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9250900: start=(42.51,-18.39), via=region_2, end=(0.60,11.23)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9251300",
+      "source": "atc",
+      "atc_person_id": "9251300",
+      "role": "commuter",
+      "subtype": "parking_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 35.58s, mean speed 1.321m/s, slow ratio 0.0, regions region_2.",
+      "motivation": "Follow an indoor movement pattern associated with region_2, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_2"
+      ],
+      "personal_variation": "accepts a small detour for interesting places",
+      "desired_speed_mps": 1.32,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 924,
+        "duration_seconds": 35.58,
+        "path_length_m": 54.91,
+        "displacement_m": 44.44,
+        "mean_speed_m_s": 1.321,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.236,
+        "top_regions": [
+          [
+            "region_2",
+            66
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9251300: start=(43.01,-18.14), via=region_2, end=(6.34,6.97)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9251500",
+      "source": "atc",
+      "atc_person_id": "9251500",
+      "role": "commuter",
+      "subtype": "parking_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 61.77s, mean speed 1.348m/s, slow ratio 0.0, regions region_6.",
+      "motivation": "Follow an indoor movement pattern associated with region_6, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_6"
+      ],
+      "personal_variation": "prefers a different stop than nearby agents with the same role",
+      "desired_speed_mps": 1.35,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1608,
+        "duration_seconds": 61.77,
+        "path_length_m": 99.59,
+        "displacement_m": 83.42,
+        "mean_speed_m_s": 1.348,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.194,
+        "top_regions": [
+          [
+            "region_6",
+            43
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9251500: start=(42.43,-18.27), via=region_6, end=(-39.53,-2.70)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9251800",
+      "source": "atc",
+      "atc_person_id": "9251800",
+      "role": "commuter",
+      "subtype": "parking_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 24.01s, mean speed 1.383m/s, slow ratio 0.0, regions unlabeled indoor areas.",
+      "motivation": "Move efficiently through the building toward transit, parking, or a direct exit.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor"
+      ],
+      "personal_variation": "accepts a small detour for interesting places",
+      "desired_speed_mps": 1.38,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 615,
+        "duration_seconds": 24.01,
+        "path_length_m": 36.58,
+        "displacement_m": 34.19,
+        "mean_speed_m_s": 1.383,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.07,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9251800: start=(30.59,-16.96), via=unlabeled path, end=(1.60,1.17)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9252600",
+      "source": "atc",
+      "atc_person_id": "9252600",
+      "role": "commuter",
+      "subtype": "parking_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 31.83s, mean speed 1.29m/s, slow ratio 0.0, regions unlabeled indoor areas.",
+      "motivation": "Move efficiently through the building toward transit, parking, or a direct exit.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor"
+      ],
+      "personal_variation": "prefers a different stop than nearby agents with the same role",
+      "desired_speed_mps": 1.29,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 785,
+        "duration_seconds": 31.83,
+        "path_length_m": 46.9,
+        "displacement_m": 40.23,
+        "mean_speed_m_s": 1.29,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.166,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9252600: start=(42.27,-18.57), via=unlabeled path, end=(8.02,2.55)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9252800",
+      "source": "atc",
+      "atc_person_id": "9252800",
+      "role": "commuter",
+      "subtype": "parking_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 71.13s, mean speed 1.216m/s, slow ratio 0.0, regions region_6.",
+      "motivation": "Follow an indoor movement pattern associated with region_6, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_6"
+      ],
+      "personal_variation": "accepts a small detour for interesting places",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1859,
+        "duration_seconds": 71.13,
+        "path_length_m": 102.47,
+        "displacement_m": 84.15,
+        "mean_speed_m_s": 1.216,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.218,
+        "top_regions": [
+          [
+            "region_6",
+            43
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9252800: start=(42.70,-18.53), via=region_6, end=(-39.90,-2.46)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9253400",
+      "source": "atc",
+      "atc_person_id": "9253400",
+      "role": "commuter",
+      "subtype": "hurried_passenger",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 22.57s, mean speed 1.395m/s, slow ratio 0.0, regions region_6.",
+      "motivation": "Follow an indoor movement pattern associated with region_6, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_6"
+      ],
+      "personal_variation": "avoids unnecessary stops",
+      "desired_speed_mps": 1.4,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 568,
+        "duration_seconds": 22.57,
+        "path_length_m": 36.89,
+        "displacement_m": 32.03,
+        "mean_speed_m_s": 1.395,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.152,
+        "top_regions": [
+          [
+            "region_6",
+            37
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9253400: start=(-6.67,1.77), via=region_6, end=(-38.28,-3.45)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9254100",
+      "source": "atc",
+      "atc_person_id": "9254100",
+      "role": "commuter",
+      "subtype": "hurried_passenger",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 81.62s, mean speed 1.074m/s, slow ratio 0.0, regions region_6.",
+      "motivation": "Follow an indoor movement pattern associated with region_6, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_6"
+      ],
+      "personal_variation": "chooses a less crowded-looking alternative when plausible",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 2149,
+        "duration_seconds": 81.62,
+        "path_length_m": 103.26,
+        "displacement_m": 82.59,
+        "mean_speed_m_s": 1.074,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.25,
+        "top_regions": [
+          [
+            "region_6",
+            51
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9254100: start=(42.18,-17.76), via=region_6, end=(-39.10,-3.16)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9254101",
+      "source": "atc",
+      "atc_person_id": "9254101",
+      "role": "commuter",
+      "subtype": "train_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 66.59s, mean speed 1.323m/s, slow ratio 0.001, regions region_6.",
+      "motivation": "Follow an indoor movement pattern associated with region_6, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_6"
+      ],
+      "personal_variation": "prefers shortest plausible path",
+      "desired_speed_mps": 1.32,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1748,
+        "duration_seconds": 66.59,
+        "path_length_m": 104.36,
+        "displacement_m": 85.47,
+        "mean_speed_m_s": 1.323,
+        "slow_ratio": 0.001,
+        "tortuosity": 1.221,
+        "top_regions": [
+          [
+            "region_6",
+            45
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9254101: start=(43.56,-20.15), via=region_6, end=(-40.08,-2.56)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9254200",
+      "source": "atc",
+      "atc_person_id": "9254200",
+      "role": "commuter",
+      "subtype": "hurried_passenger",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 29.49s, mean speed 1.389m/s, slow ratio 0.0, regions region_6.",
+      "motivation": "Follow an indoor movement pattern associated with region_6, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_6"
+      ],
+      "personal_variation": "chooses a less crowded-looking alternative when plausible",
+      "desired_speed_mps": 1.39,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 752,
+        "duration_seconds": 29.49,
+        "path_length_m": 47.64,
+        "displacement_m": 41.7,
+        "mean_speed_m_s": 1.389,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.142,
+        "top_regions": [
+          [
+            "region_6",
+            36
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9254200: start=(0.87,1.34), via=region_6, end=(-40.69,-2.08)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9254300",
+      "source": "atc",
+      "atc_person_id": "9254300",
+      "role": "commuter",
+      "subtype": "train_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 80.29s, mean speed 1.119m/s, slow ratio 0.0, regions region_6.",
+      "motivation": "Follow an indoor movement pattern associated with region_6, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_6"
+      ],
+      "personal_variation": "prefers shortest plausible path",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 2086,
+        "duration_seconds": 80.29,
+        "path_length_m": 101.9,
+        "displacement_m": 82.34,
+        "mean_speed_m_s": 1.119,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.237,
+        "top_regions": [
+          [
+            "region_6",
+            44
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9254300: start=(40.08,-17.71), via=region_6, end=(-40.84,-2.50)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9255100",
+      "source": "atc",
+      "atc_person_id": "9255100",
+      "role": "commuter",
+      "subtype": "train_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 39.76s, mean speed 1.137m/s, slow ratio 0.0, regions region_2.",
+      "motivation": "Follow an indoor movement pattern associated with region_2, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_2"
+      ],
+      "personal_variation": "prefers shortest plausible path",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1039,
+        "duration_seconds": 39.76,
+        "path_length_m": 53.35,
+        "displacement_m": 43.31,
+        "mean_speed_m_s": 1.137,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.232,
+        "top_regions": [
+          [
+            "region_2",
+            19
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9255100: start=(45.14,-18.29), via=region_2, end=(7.87,3.77)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9255200",
+      "source": "atc",
+      "atc_person_id": "9255200",
+      "role": "commuter",
+      "subtype": "parking_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 72.57s, mean speed 1.195m/s, slow ratio 0.0, regions region_6.",
+      "motivation": "Follow an indoor movement pattern associated with region_6, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_6"
+      ],
+      "personal_variation": "prefers a different stop than nearby agents with the same role",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1926,
+        "duration_seconds": 72.57,
+        "path_length_m": 102.26,
+        "displacement_m": 83.77,
+        "mean_speed_m_s": 1.195,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.221,
+        "top_regions": [
+          [
+            "region_6",
+            47
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9255200: start=(41.81,-18.46), via=region_6, end=(-40.39,-2.28)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9255700",
+      "source": "atc",
+      "atc_person_id": "9255700",
+      "role": "visitor",
+      "subtype": "lost_visitor",
+      "attribute": "You behave like a visitor inferred from ATC indoor tracking: duration 64.95s, mean speed 0.581m/s, slow ratio 0.068, regions unlabeled indoor areas.",
+      "motivation": "Explore visible landmarks or public areas before choosing an exit.",
+      "preferences": [
+        "visible landmarks",
+        "shops",
+        "restaurant",
+        "stairs",
+        "escalator"
+      ],
+      "personal_variation": "accepts a small detour for interesting places",
+      "desired_speed_mps": 0.8,
+      "default_wait_seconds": 29,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1697,
+        "duration_seconds": 64.95,
+        "path_length_m": 55.83,
+        "displacement_m": 0.28,
+        "mean_speed_m_s": 0.581,
+        "slow_ratio": 0.068,
+        "tortuosity": 201.923,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9255700: start=(39.03,-20.29), via=unlabeled path, end=(38.83,-20.48)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9271900",
+      "source": "atc",
+      "atc_person_id": "9271900",
+      "role": "commuter",
+      "subtype": "hurried_passenger",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 14.32s, mean speed 1.018m/s, slow ratio 0.0, regions unlabeled indoor areas.",
+      "motivation": "Move efficiently through the building toward transit, parking, or a direct exit.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor"
+      ],
+      "personal_variation": "chooses a less crowded-looking alternative when plausible",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 395,
+        "duration_seconds": 14.32,
+        "path_length_m": 15.16,
+        "displacement_m": 13.72,
+        "mean_speed_m_s": 1.018,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.105,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9271900: start=(-18.78,-6.32), via=unlabeled path, end=(-5.75,-10.62)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9272200",
+      "source": "atc",
+      "atc_person_id": "9272200",
+      "role": "commuter",
+      "subtype": "parking_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 45.15s, mean speed 1.133m/s, slow ratio 0.007, regions region_8.",
+      "motivation": "Follow an indoor movement pattern associated with region_8, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_8"
+      ],
+      "personal_variation": "prefers a different stop than nearby agents with the same role",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1173,
+        "duration_seconds": 45.15,
+        "path_length_m": 59.4,
+        "displacement_m": 42.74,
+        "mean_speed_m_s": 1.133,
+        "slow_ratio": 0.007,
+        "tortuosity": 1.39,
+        "top_regions": [
+          [
+            "region_8",
+            36
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9272200: start=(45.43,-18.80), via=region_8, end=(5.10,-4.67)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9273900",
+      "source": "atc",
+      "atc_person_id": "9273900",
+      "role": "commuter",
+      "subtype": "hurried_passenger",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 39.93s, mean speed 1.22m/s, slow ratio 0.01, regions region_2.",
+      "motivation": "Follow an indoor movement pattern associated with region_2, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_2"
+      ],
+      "personal_variation": "chooses a less crowded-looking alternative when plausible",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1020,
+        "duration_seconds": 39.93,
+        "path_length_m": 57.24,
+        "displacement_m": 45.13,
+        "mean_speed_m_s": 1.22,
+        "slow_ratio": 0.01,
+        "tortuosity": 1.268,
+        "top_regions": [
+          [
+            "region_2",
+            35
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9273900: start=(45.72,-18.63), via=region_2, end=(6.88,4.35)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9274200",
+      "source": "atc",
+      "atc_person_id": "9274200",
+      "role": "commuter",
+      "subtype": "parking_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 23.33s, mean speed 1.424m/s, slow ratio 0.0, regions region_3.",
+      "motivation": "Follow an indoor movement pattern associated with region_3, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_3"
+      ],
+      "personal_variation": "prefers a different stop than nearby agents with the same role",
+      "desired_speed_mps": 1.42,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 591,
+        "duration_seconds": 23.33,
+        "path_length_m": 37.16,
+        "displacement_m": 33.6,
+        "mean_speed_m_s": 1.424,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.106,
+        "top_regions": [
+          [
+            "region_3",
+            96
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9274200: start=(-36.38,-2.23), via=region_3, end=(-6.76,13.61)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9274500",
+      "source": "atc",
+      "atc_person_id": "9274500",
+      "role": "commuter",
+      "subtype": "hurried_passenger",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 62.31s, mean speed 1.404m/s, slow ratio 0.0, regions region_6.",
+      "motivation": "Follow an indoor movement pattern associated with region_6, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_6"
+      ],
+      "personal_variation": "avoids unnecessary stops",
+      "desired_speed_mps": 1.4,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1595,
+        "duration_seconds": 62.31,
+        "path_length_m": 100.25,
+        "displacement_m": 85.18,
+        "mean_speed_m_s": 1.404,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.177,
+        "top_regions": [
+          [
+            "region_6",
+            36
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9274500: start=(43.81,-20.09), via=region_6, end=(-39.60,-2.86)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9274600",
+      "source": "atc",
+      "atc_person_id": "9274600",
+      "role": "commuter",
+      "subtype": "hurried_passenger",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 34.46s, mean speed 1.28m/s, slow ratio 0.0, regions region_2.",
+      "motivation": "Follow an indoor movement pattern associated with region_2, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_2"
+      ],
+      "personal_variation": "chooses a less crowded-looking alternative when plausible",
+      "desired_speed_mps": 1.28,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 883,
+        "duration_seconds": 34.46,
+        "path_length_m": 48.64,
+        "displacement_m": 43.43,
+        "mean_speed_m_s": 1.28,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.12,
+        "top_regions": [
+          [
+            "region_2",
+            21
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9274600: start=(44.31,-19.20), via=region_2, end=(7.57,3.96)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9275000",
+      "source": "atc",
+      "atc_person_id": "9275000",
+      "role": "commuter",
+      "subtype": "train_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 62.75s, mean speed 1.314m/s, slow ratio 0.0, regions region_6.",
+      "motivation": "Follow an indoor movement pattern associated with region_6, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_6"
+      ],
+      "personal_variation": "may pause briefly at the intended destination",
+      "desired_speed_mps": 1.31,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1591,
+        "duration_seconds": 62.75,
+        "path_length_m": 99.62,
+        "displacement_m": 83.33,
+        "mean_speed_m_s": 1.314,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.195,
+        "top_regions": [
+          [
+            "region_6",
+            33
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9275000: start=(41.73,-18.39), via=region_6, end=(-40.13,-2.83)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9275700",
+      "source": "atc",
+      "atc_person_id": "9275700",
+      "role": "commuter",
+      "subtype": "parking_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 70.58s, mean speed 1.26m/s, slow ratio 0.001, regions region_6.",
+      "motivation": "Follow an indoor movement pattern associated with region_6, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_6"
+      ],
+      "personal_variation": "accepts a small detour for interesting places",
+      "desired_speed_mps": 1.26,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1787,
+        "duration_seconds": 70.58,
+        "path_length_m": 101.78,
+        "displacement_m": 86.82,
+        "mean_speed_m_s": 1.26,
+        "slow_ratio": 0.001,
+        "tortuosity": 1.172,
+        "top_regions": [
+          [
+            "region_6",
+            39
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9275700: start=(44.98,-20.06), via=region_6, end=(-40.05,-2.54)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9280500",
+      "source": "atc",
+      "atc_person_id": "9280500",
+      "role": "commuter",
+      "subtype": "train_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 37.52s, mean speed 1.242m/s, slow ratio 0.0, regions region_8.",
+      "motivation": "Follow an indoor movement pattern associated with region_8, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_8"
+      ],
+      "personal_variation": "prefers shortest plausible path",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 974,
+        "duration_seconds": 37.52,
+        "path_length_m": 51.72,
+        "displacement_m": 41.74,
+        "mean_speed_m_s": 1.242,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.239,
+        "top_regions": [
+          [
+            "region_8",
+            54
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9280500: start=(45.04,-20.11), via=region_8, end=(6.07,-5.15)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9280800",
+      "source": "atc",
+      "atc_person_id": "9280800",
+      "role": "visitor",
+      "subtype": "lost_visitor",
+      "attribute": "You behave like a visitor inferred from ATC indoor tracking: duration 94.34s, mean speed 0.79m/s, slow ratio 0.036, regions unlabeled indoor areas.",
+      "motivation": "Explore visible landmarks or public areas before choosing an exit.",
+      "preferences": [
+        "visible landmarks",
+        "shops",
+        "restaurant",
+        "stairs",
+        "escalator"
+      ],
+      "personal_variation": "prefers a different stop than nearby agents with the same role",
+      "desired_speed_mps": 0.8,
+      "default_wait_seconds": 25,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 2398,
+        "duration_seconds": 94.34,
+        "path_length_m": 83.41,
+        "displacement_m": 35.53,
+        "mean_speed_m_s": 0.79,
+        "slow_ratio": 0.036,
+        "tortuosity": 2.348,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9280800: start=(-36.45,-3.34), via=unlabeled path, end=(-0.94,-2.38)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9280900",
+      "source": "atc",
+      "atc_person_id": "9280900",
+      "role": "visitor",
+      "subtype": "lost_visitor",
+      "attribute": "You behave like a visitor inferred from ATC indoor tracking: duration 68.86s, mean speed 0.852m/s, slow ratio 0.003, regions unlabeled indoor areas.",
+      "motivation": "Explore visible landmarks or public areas before choosing an exit.",
+      "preferences": [
+        "visible landmarks",
+        "shops",
+        "restaurant",
+        "stairs",
+        "escalator"
+      ],
+      "personal_variation": "prefers a different stop than nearby agents with the same role",
+      "desired_speed_mps": 0.85,
+      "default_wait_seconds": 20,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1775,
+        "duration_seconds": 68.86,
+        "path_length_m": 56.63,
+        "displacement_m": 34.3,
+        "mean_speed_m_s": 0.852,
+        "slow_ratio": 0.003,
+        "tortuosity": 1.651,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9280900: start=(-36.09,-2.89), via=unlabeled path, end=(-1.79,-3.30)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9281300",
+      "source": "atc",
+      "atc_person_id": "9281300",
+      "role": "commuter",
+      "subtype": "parking_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 47.45s, mean speed 1.219m/s, slow ratio 0.0, regions region_2.",
+      "motivation": "Follow an indoor movement pattern associated with region_2, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_2"
+      ],
+      "personal_variation": "prefers a different stop than nearby agents with the same role",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1204,
+        "duration_seconds": 47.45,
+        "path_length_m": 68.71,
+        "displacement_m": 57.12,
+        "mean_speed_m_s": 1.219,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.203,
+        "top_regions": [
+          [
+            "region_2",
+            64
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9281300: start=(46.29,-23.43), via=region_2, end=(0.91,11.26)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9281301",
+      "source": "atc",
+      "atc_person_id": "9281301",
+      "role": "commuter",
+      "subtype": "train_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 12.84s, mean speed 1.161m/s, slow ratio 0.006, regions unlabeled indoor areas.",
+      "motivation": "Move efficiently through the building toward transit, parking, or a direct exit.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor"
+      ],
+      "personal_variation": "prefers shortest plausible path",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 340,
+        "duration_seconds": 12.84,
+        "path_length_m": 17.53,
+        "displacement_m": 15.34,
+        "mean_speed_m_s": 1.161,
+        "slow_ratio": 0.006,
+        "tortuosity": 1.142,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9281301: start=(45.67,-24.53), via=unlabeled path, end=(31.29,-19.17)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9282100",
+      "source": "atc",
+      "atc_person_id": "9282100",
+      "role": "commuter",
+      "subtype": "train_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 43.85s, mean speed 1.319m/s, slow ratio 0.0, regions region_2.",
+      "motivation": "Follow an indoor movement pattern associated with region_2, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_2"
+      ],
+      "personal_variation": "may pause briefly at the intended destination",
+      "desired_speed_mps": 1.32,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1112,
+        "duration_seconds": 43.85,
+        "path_length_m": 65.8,
+        "displacement_m": 57.01,
+        "mean_speed_m_s": 1.319,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.154,
+        "top_regions": [
+          [
+            "region_2",
+            88
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9282100: start=(45.03,-24.11), via=region_2, end=(0.31,11.26)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9282300",
+      "source": "atc",
+      "atc_person_id": "9282300",
+      "role": "commuter",
+      "subtype": "hurried_passenger",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 21.04s, mean speed 1.227m/s, slow ratio 0.0, regions unlabeled indoor areas.",
+      "motivation": "Move efficiently through the building toward transit, parking, or a direct exit.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor"
+      ],
+      "personal_variation": "avoids unnecessary stops",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 521,
+        "duration_seconds": 21.04,
+        "path_length_m": 31.16,
+        "displacement_m": 27.15,
+        "mean_speed_m_s": 1.227,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.148,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9282300: start=(42.06,-23.50), via=unlabeled path, end=(17.38,-12.19)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9282801",
+      "source": "atc",
+      "atc_person_id": "9282801",
+      "role": "commuter",
+      "subtype": "hurried_passenger",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 32.3s, mean speed 1.235m/s, slow ratio 0.0, regions region_2.",
+      "motivation": "Follow an indoor movement pattern associated with region_2, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_2"
+      ],
+      "personal_variation": "chooses a less crowded-looking alternative when plausible",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 800,
+        "duration_seconds": 32.3,
+        "path_length_m": 46.32,
+        "displacement_m": 39.86,
+        "mean_speed_m_s": 1.235,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.162,
+        "top_regions": [
+          [
+            "region_2",
+            53
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9282801: start=(27.11,-17.51), via=region_2, end=(-0.32,11.41)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9283100",
+      "source": "atc",
+      "atc_person_id": "9283100",
+      "role": "commuter",
+      "subtype": "hurried_passenger",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 25.54s, mean speed 1.653m/s, slow ratio 0.0, regions region_2, region_9.",
+      "motivation": "Follow an indoor movement pattern associated with region_2, region_9, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_2",
+        "region_9"
+      ],
+      "personal_variation": "chooses a less crowded-looking alternative when plausible",
+      "desired_speed_mps": 1.65,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 618,
+        "duration_seconds": 25.54,
+        "path_length_m": 47.04,
+        "displacement_m": 41.51,
+        "mean_speed_m_s": 1.653,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.133,
+        "top_regions": [
+          [
+            "region_2",
+            20
+          ],
+          [
+            "region_9",
+            3
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9283100: start=(42.38,-17.97), via=region_2 -> region_9, end=(7.19,4.05)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9283300",
+      "source": "atc",
+      "atc_person_id": "9283300",
+      "role": "commuter",
+      "subtype": "parking_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 41.37s, mean speed 1.111m/s, slow ratio 0.0, regions unlabeled indoor areas.",
+      "motivation": "Move efficiently through the building toward transit, parking, or a direct exit.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor"
+      ],
+      "personal_variation": "accepts a small detour for interesting places",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1045,
+        "duration_seconds": 41.37,
+        "path_length_m": 51.51,
+        "displacement_m": 44.9,
+        "mean_speed_m_s": 1.111,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.147,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9283300: start=(42.73,-18.33), via=unlabeled path, end=(1.40,-0.79)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9283301",
+      "source": "atc",
+      "atc_person_id": "9283301",
+      "role": "commuter",
+      "subtype": "parking_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 29.14s, mean speed 1.768m/s, slow ratio 0.0, regions region_2.",
+      "motivation": "Follow an indoor movement pattern associated with region_2, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_2"
+      ],
+      "personal_variation": "prefers a different stop than nearby agents with the same role",
+      "desired_speed_mps": 1.77,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 722,
+        "duration_seconds": 29.14,
+        "path_length_m": 56.55,
+        "displacement_m": 50.15,
+        "mean_speed_m_s": 1.768,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.128,
+        "top_regions": [
+          [
+            "region_2",
+            38
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9283301: start=(46.41,-23.95), via=region_2, end=(5.63,5.23)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9284200",
+      "source": "atc",
+      "atc_person_id": "9284200",
+      "role": "commuter",
+      "subtype": "hurried_passenger",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 63.38s, mean speed 1.37m/s, slow ratio 0.0, regions region_6.",
+      "motivation": "Follow an indoor movement pattern associated with region_6, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_6"
+      ],
+      "personal_variation": "avoids unnecessary stops",
+      "desired_speed_mps": 1.37,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1637,
+        "duration_seconds": 63.38,
+        "path_length_m": 99.09,
+        "displacement_m": 82.86,
+        "mean_speed_m_s": 1.37,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.196,
+        "top_regions": [
+          [
+            "region_6",
+            46
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9284200: start=(42.17,-18.14), via=region_6, end=(-39.30,-3.00)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9284600",
+      "source": "atc",
+      "atc_person_id": "9284600",
+      "role": "commuter",
+      "subtype": "hurried_passenger",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 20.97s, mean speed 1.261m/s, slow ratio 0.0, regions region_2.",
+      "motivation": "Follow an indoor movement pattern associated with region_2, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_2"
+      ],
+      "personal_variation": "avoids unnecessary stops",
+      "desired_speed_mps": 1.26,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 524,
+        "duration_seconds": 20.97,
+        "path_length_m": 29.76,
+        "displacement_m": 26.51,
+        "mean_speed_m_s": 1.261,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.123,
+        "top_regions": [
+          [
+            "region_2",
+            80
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9284600: start=(15.78,-10.47), via=region_2, end=(0.50,11.19)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9284700",
+      "source": "atc",
+      "atc_person_id": "9284700",
+      "role": "commuter",
+      "subtype": "hurried_passenger",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 66.55s, mean speed 1.297m/s, slow ratio 0.0, regions region_6.",
+      "motivation": "Follow an indoor movement pattern associated with region_6, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_6"
+      ],
+      "personal_variation": "chooses a less crowded-looking alternative when plausible",
+      "desired_speed_mps": 1.3,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1728,
+        "duration_seconds": 66.55,
+        "path_length_m": 98.93,
+        "displacement_m": 84.09,
+        "mean_speed_m_s": 1.297,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.177,
+        "top_regions": [
+          [
+            "region_6",
+            40
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9284700: start=(42.24,-18.21), via=region_6, end=(-40.35,-2.45)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9285100",
+      "source": "atc",
+      "atc_person_id": "9285100",
+      "role": "commuter",
+      "subtype": "hurried_passenger",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 12.99s, mean speed 1.309m/s, slow ratio 0.0, regions unlabeled indoor areas.",
+      "motivation": "Move efficiently through the building toward transit, parking, or a direct exit.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor"
+      ],
+      "personal_variation": "chooses a less crowded-looking alternative when plausible",
+      "desired_speed_mps": 1.31,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 328,
+        "duration_seconds": 12.99,
+        "path_length_m": 18.83,
+        "displacement_m": 17.07,
+        "mean_speed_m_s": 1.309,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.103,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9285100: start=(42.42,-18.52), via=unlabeled path, end=(25.64,-15.42)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9285800",
+      "source": "atc",
+      "atc_person_id": "9285800",
+      "role": "commuter",
+      "subtype": "parking_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 28.48s, mean speed 1.508m/s, slow ratio 0.0, regions region_2.",
+      "motivation": "Follow an indoor movement pattern associated with region_2, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_2"
+      ],
+      "personal_variation": "prefers a different stop than nearby agents with the same role",
+      "desired_speed_mps": 1.51,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 750,
+        "duration_seconds": 28.48,
+        "path_length_m": 49.64,
+        "displacement_m": 41.13,
+        "mean_speed_m_s": 1.508,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.207,
+        "top_regions": [
+          [
+            "region_2",
+            1
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9285800: start=(42.68,-18.77), via=region_2, end=(7.80,3.04)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9290500",
+      "source": "atc",
+      "atc_person_id": "9290500",
+      "role": "commuter",
+      "subtype": "hurried_passenger",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 18.73s, mean speed 1.234m/s, slow ratio 0.0, regions region_8.",
+      "motivation": "Follow an indoor movement pattern associated with region_8, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_8"
+      ],
+      "personal_variation": "chooses a less crowded-looking alternative when plausible",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 496,
+        "duration_seconds": 18.73,
+        "path_length_m": 27.42,
+        "displacement_m": 21.08,
+        "mean_speed_m_s": 1.234,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.301,
+        "top_regions": [
+          [
+            "region_8",
+            8
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9290500: start=(23.61,-14.53), via=region_8, end=(5.12,-4.42)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9290600",
+      "source": "atc",
+      "atc_person_id": "9290600",
+      "role": "visitor",
+      "subtype": "lost_visitor",
+      "attribute": "You behave like a visitor inferred from ATC indoor tracking: duration 29.13s, mean speed 0.887m/s, slow ratio 0.019, regions unlabeled indoor areas.",
+      "motivation": "Explore visible landmarks or public areas before choosing an exit.",
+      "preferences": [
+        "visible landmarks",
+        "shops",
+        "restaurant",
+        "stairs",
+        "escalator"
+      ],
+      "personal_variation": "prefers a different stop than nearby agents with the same role",
+      "desired_speed_mps": 0.89,
+      "default_wait_seconds": 22,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 772,
+        "duration_seconds": 29.13,
+        "path_length_m": 29.28,
+        "displacement_m": 7.27,
+        "mean_speed_m_s": 0.887,
+        "slow_ratio": 0.019,
+        "tortuosity": 4.029,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9290600: start=(41.22,-20.73), via=unlabeled path, end=(47.55,-24.30)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9291500",
+      "source": "atc",
+      "atc_person_id": "9291500",
+      "role": "commuter",
+      "subtype": "parking_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 20.65s, mean speed 1.051m/s, slow ratio 0.0, regions unlabeled indoor areas.",
+      "motivation": "Move efficiently through the building toward transit, parking, or a direct exit.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor"
+      ],
+      "personal_variation": "prefers a different stop than nearby agents with the same role",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 541,
+        "duration_seconds": 20.65,
+        "path_length_m": 23.62,
+        "displacement_m": 22.09,
+        "mean_speed_m_s": 1.051,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.07,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9291500: start=(-0.62,-1.05), via=unlabeled path, end=(-22.12,-6.12)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9292300",
+      "source": "atc",
+      "atc_person_id": "9292300",
+      "role": "visitor",
+      "subtype": "meeting_visitor",
+      "attribute": "You behave like a visitor inferred from ATC indoor tracking: duration 14.58s, mean speed 0.628m/s, slow ratio 0.026, regions unlabeled indoor areas.",
+      "motivation": "Explore visible landmarks or public areas before choosing an exit.",
+      "preferences": [
+        "visible landmarks",
+        "shops",
+        "restaurant",
+        "stairs",
+        "escalator"
+      ],
+      "personal_variation": "chooses a less crowded-looking alternative when plausible",
+      "desired_speed_mps": 0.8,
+      "default_wait_seconds": 23,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 384,
+        "duration_seconds": 14.58,
+        "path_length_m": 11.44,
+        "displacement_m": 0.53,
+        "mean_speed_m_s": 0.628,
+        "slow_ratio": 0.026,
+        "tortuosity": 21.625,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9292300: start=(-1.49,-2.78), via=unlabeled path, end=(-1.17,-3.21)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9292600",
+      "source": "atc",
+      "atc_person_id": "9292600",
+      "role": "commuter",
+      "subtype": "parking_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 82.37s, mean speed 1.084m/s, slow ratio 0.0, regions region_6.",
+      "motivation": "Follow an indoor movement pattern associated with region_6, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_6"
+      ],
+      "personal_variation": "accepts a small detour for interesting places",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 2147,
+        "duration_seconds": 82.37,
+        "path_length_m": 101.36,
+        "displacement_m": 84.35,
+        "mean_speed_m_s": 1.084,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.202,
+        "top_regions": [
+          [
+            "region_6",
+            46
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9292600: start=(42.47,-18.33), via=region_6, end=(-40.36,-2.35)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9293000",
+      "source": "atc",
+      "atc_person_id": "9293000",
+      "role": "visitor",
+      "subtype": "meeting_visitor",
+      "attribute": "You behave like a visitor inferred from ATC indoor tracking: duration 18.33s, mean speed 0.637m/s, slow ratio 0.088, regions unlabeled indoor areas.",
+      "motivation": "Explore visible landmarks or public areas before choosing an exit.",
+      "preferences": [
+        "visible landmarks",
+        "shops",
+        "restaurant",
+        "stairs",
+        "escalator"
+      ],
+      "personal_variation": "avoids unnecessary stops",
+      "desired_speed_mps": 0.8,
+      "default_wait_seconds": 32,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 479,
+        "duration_seconds": 18.33,
+        "path_length_m": 17.08,
+        "displacement_m": 0.5,
+        "mean_speed_m_s": 0.637,
+        "slow_ratio": 0.088,
+        "tortuosity": 34.233,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9293000: start=(-1.62,-3.01), via=unlabeled path, end=(-1.79,-3.48)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9293500",
+      "source": "atc",
+      "atc_person_id": "9293500",
+      "role": "visitor",
+      "subtype": "lost_visitor",
+      "attribute": "You behave like a visitor inferred from ATC indoor tracking: duration 37.99s, mean speed 0.601m/s, slow ratio 0.065, regions unlabeled indoor areas.",
+      "motivation": "Explore visible landmarks or public areas before choosing an exit.",
+      "preferences": [
+        "visible landmarks",
+        "shops",
+        "restaurant",
+        "stairs",
+        "escalator"
+      ],
+      "personal_variation": "accepts a small detour for interesting places",
+      "desired_speed_mps": 0.8,
+      "default_wait_seconds": 29,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 997,
+        "duration_seconds": 37.99,
+        "path_length_m": 29.92,
+        "displacement_m": 1.37,
+        "mean_speed_m_s": 0.601,
+        "slow_ratio": 0.065,
+        "tortuosity": 21.82,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9293500: start=(-0.78,-2.24), via=unlabeled path, end=(0.46,-2.83)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9294801",
+      "source": "atc",
+      "atc_person_id": "9294801",
+      "role": "visitor",
+      "subtype": "meeting_visitor",
+      "attribute": "You behave like a visitor inferred from ATC indoor tracking: duration 19.75s, mean speed 0.605m/s, slow ratio 0.081, regions unlabeled indoor areas.",
+      "motivation": "Explore visible landmarks or public areas before choosing an exit.",
+      "preferences": [
+        "visible landmarks",
+        "shops",
+        "restaurant",
+        "stairs",
+        "escalator"
+      ],
+      "personal_variation": "avoids unnecessary stops",
+      "desired_speed_mps": 0.8,
+      "default_wait_seconds": 31,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 518,
+        "duration_seconds": 19.75,
+        "path_length_m": 16.21,
+        "displacement_m": 1.2,
+        "mean_speed_m_s": 0.605,
+        "slow_ratio": 0.081,
+        "tortuosity": 13.538,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9294801: start=(-1.42,-2.56), via=unlabeled path, end=(-0.28,-2.20)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9301300",
+      "source": "atc",
+      "atc_person_id": "9301300",
+      "role": "commuter",
+      "subtype": "parking_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 57.05s, mean speed 0.988m/s, slow ratio 0.023, regions unlabeled indoor areas.",
+      "motivation": "Move efficiently through the building toward transit, parking, or a direct exit.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor"
+      ],
+      "personal_variation": "accepts a small detour for interesting places",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1542,
+        "duration_seconds": 57.05,
+        "path_length_m": 63.62,
+        "displacement_m": 47.02,
+        "mean_speed_m_s": 0.988,
+        "slow_ratio": 0.023,
+        "tortuosity": 1.353,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9301300: start=(-0.93,-1.70), via=unlabeled path, end=(43.41,-17.34)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9301400",
+      "source": "atc",
+      "atc_person_id": "9301400",
+      "role": "visitor",
+      "subtype": "meeting_visitor",
+      "attribute": "You behave like a visitor inferred from ATC indoor tracking: duration 39.34s, mean speed 0.825m/s, slow ratio 0.004, regions region_1.",
+      "motivation": "Follow an indoor movement pattern associated with region_1, then leave.",
+      "preferences": [
+        "visible landmarks",
+        "shops",
+        "restaurant",
+        "stairs",
+        "escalator",
+        "region_1"
+      ],
+      "personal_variation": "chooses a less crowded-looking alternative when plausible",
+      "desired_speed_mps": 0.82,
+      "default_wait_seconds": 20,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1065,
+        "duration_seconds": 39.34,
+        "path_length_m": 33.23,
+        "displacement_m": 27.42,
+        "mean_speed_m_s": 0.825,
+        "slow_ratio": 0.004,
+        "tortuosity": 1.212,
+        "top_regions": [
+          [
+            "region_1",
+            118
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9301400: start=(-9.62,-9.89), via=region_1, end=(-20.67,15.20)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9301600",
+      "source": "atc",
+      "atc_person_id": "9301600",
+      "role": "commuter",
+      "subtype": "parking_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 54.36s, mean speed 1.007m/s, slow ratio 0.0, regions unlabeled indoor areas.",
+      "motivation": "Move efficiently through the building toward transit, parking, or a direct exit.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor"
+      ],
+      "personal_variation": "accepts a small detour for interesting places",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1478,
+        "duration_seconds": 54.36,
+        "path_length_m": 61.28,
+        "displacement_m": 44.98,
+        "mean_speed_m_s": 1.007,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.363,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9301600: start=(0.28,-1.68), via=unlabeled path, end=(42.49,-17.20)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9302000",
+      "source": "atc",
+      "atc_person_id": "9302000",
+      "role": "commuter",
+      "subtype": "hurried_passenger",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 13.28s, mean speed 1.327m/s, slow ratio 0.0, regions unlabeled indoor areas.",
+      "motivation": "Move efficiently through the building toward transit, parking, or a direct exit.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor"
+      ],
+      "personal_variation": "avoids unnecessary stops",
+      "desired_speed_mps": 1.33,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 362,
+        "duration_seconds": 13.28,
+        "path_length_m": 19.95,
+        "displacement_m": 18.04,
+        "mean_speed_m_s": 1.327,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.106,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9302000: start=(7.87,2.96), via=unlabeled path, end=(18.63,-11.51)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9303500",
+      "source": "atc",
+      "atc_person_id": "9303500",
+      "role": "commuter",
+      "subtype": "train_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 18.2s, mean speed 1.345m/s, slow ratio 0.0, regions unlabeled indoor areas.",
+      "motivation": "Move efficiently through the building toward transit, parking, or a direct exit.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor"
+      ],
+      "personal_variation": "may pause briefly at the intended destination",
+      "desired_speed_mps": 1.35,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 485,
+        "duration_seconds": 18.2,
+        "path_length_m": 26.71,
+        "displacement_m": 24.42,
+        "mean_speed_m_s": 1.345,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.094,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9303500: start=(20.96,-12.28), via=unlabeled path, end=(44.70,-18.03)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9303700",
+      "source": "atc",
+      "atc_person_id": "9303700",
+      "role": "commuter",
+      "subtype": "hurried_passenger",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 46.89s, mean speed 1.252m/s, slow ratio 0.0, regions region_2.",
+      "motivation": "Follow an indoor movement pattern associated with region_2, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_2"
+      ],
+      "personal_variation": "avoids unnecessary stops",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1285,
+        "duration_seconds": 46.89,
+        "path_length_m": 65.41,
+        "displacement_m": 52.96,
+        "mean_speed_m_s": 1.252,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.235,
+        "top_regions": [
+          [
+            "region_2",
+            67
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9303700: start=(42.42,-18.43), via=region_2, end=(-1.04,11.82)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9304400",
+      "source": "atc",
+      "atc_person_id": "9304400",
+      "role": "commuter",
+      "subtype": "parking_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 34.42s, mean speed 1.47m/s, slow ratio 0.0, regions unlabeled indoor areas.",
+      "motivation": "Move efficiently through the building toward transit, parking, or a direct exit.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor"
+      ],
+      "personal_variation": "accepts a small detour for interesting places",
+      "desired_speed_mps": 1.47,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 959,
+        "duration_seconds": 34.42,
+        "path_length_m": 57.47,
+        "displacement_m": 50.95,
+        "mean_speed_m_s": 1.47,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.128,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9304400: start=(46.20,-23.64), via=unlabeled path, end=(1.75,1.26)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9311300",
+      "source": "atc",
+      "atc_person_id": "9311300",
+      "role": "commuter",
+      "subtype": "parking_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 24.13s, mean speed 1.384m/s, slow ratio 0.0, regions region_1.",
+      "motivation": "Follow an indoor movement pattern associated with region_1, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_1"
+      ],
+      "personal_variation": "accepts a small detour for interesting places",
+      "desired_speed_mps": 1.38,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 648,
+        "duration_seconds": 24.13,
+        "path_length_m": 37.12,
+        "displacement_m": 34.83,
+        "mean_speed_m_s": 1.384,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.066,
+        "top_regions": [
+          [
+            "region_1",
+            83
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9311300: start=(-35.36,-1.59), via=region_1, end=(-8.32,20.36)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9311400",
+      "source": "atc",
+      "atc_person_id": "9311400",
+      "role": "commuter",
+      "subtype": "hurried_passenger",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 22.98s, mean speed 1.356m/s, slow ratio 0.0, regions region_1.",
+      "motivation": "Follow an indoor movement pattern associated with region_1, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_1"
+      ],
+      "personal_variation": "avoids unnecessary stops",
+      "desired_speed_mps": 1.36,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 616,
+        "duration_seconds": 22.98,
+        "path_length_m": 35.09,
+        "displacement_m": 32.51,
+        "mean_speed_m_s": 1.356,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.079,
+        "top_regions": [
+          [
+            "region_1",
+            52
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9311400: start=(-33.29,-0.62), via=region_1, end=(-7.59,19.29)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9312200",
+      "source": "atc",
+      "atc_person_id": "9312200",
+      "role": "commuter",
+      "subtype": "hurried_passenger",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 39.45s, mean speed 1.31m/s, slow ratio 0.0, regions region_2.",
+      "motivation": "Follow an indoor movement pattern associated with region_2, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_2"
+      ],
+      "personal_variation": "avoids unnecessary stops",
+      "desired_speed_mps": 1.31,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1046,
+        "duration_seconds": 39.45,
+        "path_length_m": 56.57,
+        "displacement_m": 49.57,
+        "mean_speed_m_s": 1.31,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.141,
+        "top_regions": [
+          [
+            "region_2",
+            51
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9312200: start=(46.19,-23.31), via=region_2, end=(5.74,5.32)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9312201",
+      "source": "atc",
+      "atc_person_id": "9312201",
+      "role": "commuter",
+      "subtype": "hurried_passenger",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 37.19s, mean speed 1.15m/s, slow ratio 0.0, regions region_2.",
+      "motivation": "Follow an indoor movement pattern associated with region_2, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_2"
+      ],
+      "personal_variation": "avoids unnecessary stops",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 986,
+        "duration_seconds": 37.19,
+        "path_length_m": 49.93,
+        "displacement_m": 39.76,
+        "mean_speed_m_s": 1.15,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.256,
+        "top_regions": [
+          [
+            "region_2",
+            14
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9312201: start=(41.76,-17.76), via=region_2, end=(8.41,3.89)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9313400",
+      "source": "atc",
+      "atc_person_id": "9313400",
+      "role": "commuter",
+      "subtype": "parking_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 57.8s, mean speed 1.221m/s, slow ratio 0.0, regions unlabeled indoor areas.",
+      "motivation": "Move efficiently through the building toward transit, parking, or a direct exit.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor"
+      ],
+      "personal_variation": "accepts a small detour for interesting places",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1582,
+        "duration_seconds": 57.8,
+        "path_length_m": 79.92,
+        "displacement_m": 65.94,
+        "mean_speed_m_s": 1.221,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.212,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9313400: start=(42.82,-18.14), via=unlabeled path, end=(-22.09,-6.48)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9322200",
+      "source": "atc",
+      "atc_person_id": "9322200",
+      "role": "commuter",
+      "subtype": "hurried_passenger",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 69.52s, mean speed 1.159m/s, slow ratio 0.0, regions region_4.",
+      "motivation": "Follow an indoor movement pattern associated with region_4, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_4"
+      ],
+      "personal_variation": "avoids unnecessary stops",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1883,
+        "duration_seconds": 69.52,
+        "path_length_m": 91.16,
+        "displacement_m": 76.12,
+        "mean_speed_m_s": 1.159,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.198,
+        "top_regions": [
+          [
+            "region_4",
+            6
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9322200: start=(43.20,-23.66), via=region_4, end=(-29.29,-0.40)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9322500",
+      "source": "atc",
+      "atc_person_id": "9322500",
+      "role": "commuter",
+      "subtype": "train_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 38.08s, mean speed 1.243m/s, slow ratio 0.0, regions unlabeled indoor areas.",
+      "motivation": "Move efficiently through the building toward transit, parking, or a direct exit.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor"
+      ],
+      "personal_variation": "prefers shortest plausible path",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 1010,
+        "duration_seconds": 38.08,
+        "path_length_m": 56.15,
+        "displacement_m": 46.08,
+        "mean_speed_m_s": 1.243,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.219,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9322500: start=(8.10,0.98), via=unlabeled path, end=(47.51,-22.90)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9322501",
+      "source": "atc",
+      "atc_person_id": "9322501",
+      "role": "commuter",
+      "subtype": "train_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 23.3s, mean speed 1.598m/s, slow ratio 0.0, regions region_1.",
+      "motivation": "Follow an indoor movement pattern associated with region_1, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_1"
+      ],
+      "personal_variation": "may pause briefly at the intended destination",
+      "desired_speed_mps": 1.6,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 616,
+        "duration_seconds": 23.3,
+        "path_length_m": 40.86,
+        "displacement_m": 38.09,
+        "mean_speed_m_s": 1.598,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.073,
+        "top_regions": [
+          [
+            "region_1",
+            45
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9322501: start=(-36.62,-3.36), via=region_1, end=(-6.51,19.97)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9323500",
+      "source": "atc",
+      "atc_person_id": "9323500",
+      "role": "commuter",
+      "subtype": "train_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 36.96s, mean speed 1.289m/s, slow ratio 0.0, regions unlabeled indoor areas.",
+      "motivation": "Move efficiently through the building toward transit, parking, or a direct exit.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor"
+      ],
+      "personal_variation": "prefers shortest plausible path",
+      "desired_speed_mps": 1.29,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 982,
+        "duration_seconds": 36.96,
+        "path_length_m": 57.02,
+        "displacement_m": 47.86,
+        "mean_speed_m_s": 1.289,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.191,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9323500: start=(7.67,2.48), via=unlabeled path, end=(47.44,-24.15)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9323700",
+      "source": "atc",
+      "atc_person_id": "9323700",
+      "role": "commuter",
+      "subtype": "hurried_passenger",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 15.47s, mean speed 1.06m/s, slow ratio 0.0, regions unlabeled indoor areas.",
+      "motivation": "Move efficiently through the building toward transit, parking, or a direct exit.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor"
+      ],
+      "personal_variation": "chooses a less crowded-looking alternative when plausible",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 406,
+        "duration_seconds": 15.47,
+        "path_length_m": 18.12,
+        "displacement_m": 16.47,
+        "mean_speed_m_s": 1.06,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.1,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9323700: start=(-5.32,-7.17), via=unlabeled path, end=(-21.79,-6.78)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9330300",
+      "source": "atc",
+      "atc_person_id": "9330300",
+      "role": "commuter",
+      "subtype": "hurried_passenger",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 13.65s, mean speed 1.041m/s, slow ratio 0.0, regions unlabeled indoor areas.",
+      "motivation": "Move efficiently through the building toward transit, parking, or a direct exit.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor"
+      ],
+      "personal_variation": "chooses a less crowded-looking alternative when plausible",
+      "desired_speed_mps": 1.25,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 360,
+        "duration_seconds": 13.65,
+        "path_length_m": 16.57,
+        "displacement_m": 14.47,
+        "mean_speed_m_s": 1.041,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.145,
+        "top_regions": []
+      },
+      "reference_routine": "ATC trajectory 9330300: start=(-36.67,-2.45), via=unlabeled path, end=(-25.48,6.74)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    },
+    {
+      "profile_id": "atc_9332000",
+      "source": "atc",
+      "atc_person_id": "9332000",
+      "role": "commuter",
+      "subtype": "parking_connection",
+      "attribute": "You behave like a commuter inferred from ATC indoor tracking: duration 11.09s, mean speed 1.266m/s, slow ratio 0.0, regions region_1.",
+      "motivation": "Follow an indoor movement pattern associated with region_1, then leave.",
+      "preferences": [
+        "direct exit",
+        "train corridor",
+        "parking connection",
+        "wide corridor",
+        "region_1"
+      ],
+      "personal_variation": "prefers a different stop than nearby agents with the same role",
+      "desired_speed_mps": 1.27,
+      "default_wait_seconds": 0,
+      "training_summary": {
+        "source": "atc-20121024.csv",
+        "points": 300,
+        "duration_seconds": 11.09,
+        "path_length_m": 14.99,
+        "displacement_m": 13.91,
+        "mean_speed_m_s": 1.266,
+        "slow_ratio": 0.0,
+        "tortuosity": 1.078,
+        "top_regions": [
+          [
+            "region_1",
+            63
+          ]
+        ]
+      },
+      "reference_routine": "ATC trajectory 9332000: start=(-22.15,8.23), via=region_1, end=(-10.09,15.17)",
+      "identification_method": "atc_trajectory_behavior_heuristic"
+    }
+  ]
+}
