@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jupedsim-mall"
+version = "0.1.0"
+description = "Reproducible semantic-route pedestrian experiments with JuPedSim"
+readme = "readme.md"
+requires-python = ">=3.12"
+dependencies = [
+  "jupedsim",
+  "shapely",
+  "numpy",
+  "PyYAML",
+  "jsonschema>=4.23",
+]
+
+[project.optional-dependencies]
+llm = []
+analysis = ["matplotlib", "scipy", "scikit-learn"]
+visualization = ["opencv-python", "matplotlib", "PySide6"]
+dev = ["pytest>=8", "ruff>=0.12", "mypy>=1.16"]
+
+[project.scripts]
+jupedsim-mall = "jupedsim_mall.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E9", "F63", "F7", "F82"]
+
+[tool.mypy]
+python_version = "3.12"
+ignore_missing_imports = true
+allow_untyped_defs = true
+check_untyped_defs = true
+no_implicit_optional = false
+warn_unused_ignores = false

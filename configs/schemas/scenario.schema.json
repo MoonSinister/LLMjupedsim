@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.jupedsim-mall/schemas/scenario.schema.json",
+  "title": "Experiment scenario",
+  "type": "object",
+  "required": ["schema_version", "name", "description", "enabled", "args"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "name": {"type": "string", "minLength": 1, "pattern": "^[a-z0-9][a-z0-9_-]*$"},
+    "description": {"type": "string", "minLength": 1},
+    "enabled": {"type": "boolean"},
+    "args": {
+      "type": "array",
+      "items": {"type": ["string", "number", "integer"]}
+    },
+    "env": {
+      "type": "object",
+      "additionalProperties": {"type": ["string", "number", "integer", "boolean"]}
+    }
+  }
+}

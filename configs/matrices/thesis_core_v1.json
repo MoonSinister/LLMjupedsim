@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "name": "thesis_core_v1",
+  "description": "Paired-seed core comparison for the two baselines, semantic ablation, main method, and external-profile extensions.",
+  "frozen": false,
+  "seeds": [2026, 2027, 2028, 2029, 2030],
+  "cells": [
+    {"id": "B1", "scenario": "baseline_random", "factors": {"profile": "mall", "planner": "random"}, "requires_llm": false},
+    {"id": "B2", "scenario": "baseline_nearest", "factors": {"profile": "mall", "planner": "nearest"}, "requires_llm": false},
+    {"id": "A1", "scenario": "llm_exit_only", "factors": {"profile": "mall", "planner": "llm_exit_only"}, "requires_llm": true},
+    {"id": "M1", "scenario": "llm_remote", "factors": {"profile": "mall", "planner": "llm_semantic"}, "requires_llm": true},
+    {"id": "P1", "scenario": "atc_llm_remote", "factors": {"profile": "atc", "planner": "llm_semantic"}, "requires_llm": true},
+    {"id": "P2", "scenario": "llmob_llm_remote", "factors": {"profile": "llmob", "planner": "llm_semantic"}, "requires_llm": true}
+  ],
+  "resources": {
+    "max_workers": 2,
+    "max_llm_workers": 1,
+    "max_memory_mb": 8192,
+    "memory_mb_per_run": 2048
+  },
+  "estimates": {
+    "seconds_per_run": 1800,
+    "storage_mb_per_run": 100,
+    "llm_calls_per_run": 8
+  }
+}

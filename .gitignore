@@ -25,6 +25,15 @@ outputs/**/*.sqlite
 outputs/**/*.sqlite-*
 outputs/**/*.db
 outputs/**/*.log
+outputs/**/*.json
+outputs/**/*.jsonl
+outputs/**/*.csv
+outputs/**/*.png
+outputs/**/*.svg
+outputs/**/*.pdf
+
+# Large raw research datasets (keep local; track configs and provenance only)
+/data/atc-20121114/*.csv
 
 # Local upstream checkout / external dependency copy
 /jupedsim/

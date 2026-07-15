@@ -1,0 +1,9 @@
+{
+  "format": "jupedsim-manual-stages-v1",
+  "exits": [
+    {"name": "exit_0", "polygon": [[9, 4], [10, 4], [10, 6], [9, 6], [9, 4]]}
+  ],
+  "entrances": [
+    {"name": "entrance_0", "polygon": [[0, 4], [1, 4], [1, 6], [0, 6], [0, 4]]}
+  ]
+}

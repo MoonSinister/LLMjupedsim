@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "name": "scenario_valid",
+  "description": "Small fixture used by scenario validation tests.",
+  "enabled": true,
+  "args": [
+    "-n", "4",
+    "--movement-model", "avm",
+    "--output", "outputs/smoke/fixture.sqlite",
+    "--llm-plan-output", "outputs/plans/fixture.json"
+  ]
+}

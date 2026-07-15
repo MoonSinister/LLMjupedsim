@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "name": "thesis_pilot_v1",
+  "description": "One-seed low-agent pilot for every core thesis method before protocol freeze.",
+  "frozen": true,
+  "seeds": [2026],
+  "cells": [
+    {"id": "B1", "scenario": "baseline_random", "factors": {"profile": "mall", "planner": "random"}, "args": ["-n", "20", "--max-iters", "20000"], "requires_llm": false},
+    {"id": "B2", "scenario": "baseline_nearest", "factors": {"profile": "mall", "planner": "nearest"}, "args": ["-n", "20", "--max-iters", "20000"], "requires_llm": false},
+    {"id": "A1", "scenario": "llm_exit_only", "factors": {"profile": "mall", "planner": "llm_exit_only"}, "args": ["-n", "20", "--max-iters", "20000"], "requires_llm": true},
+    {"id": "M1", "scenario": "llm_remote", "factors": {"profile": "mall", "planner": "llm_semantic"}, "args": ["-n", "20", "--max-iters", "20000"], "requires_llm": true},
+    {"id": "P1", "scenario": "atc_llm_remote", "factors": {"profile": "atc", "planner": "llm_semantic"}, "args": ["-n", "20", "--atc-max-persons", "20", "--max-iters", "20000"], "requires_llm": true},
+    {"id": "P2", "scenario": "llmob_llm_remote", "factors": {"profile": "llmob", "planner": "llm_semantic"}, "args": ["-n", "20", "--llmob-max-persons", "20", "--max-iters", "20000"], "requires_llm": true}
+  ],
+  "resources": {"max_workers": 2, "max_llm_workers": 1, "max_memory_mb": 8192, "memory_mb_per_run": 2048},
+  "estimates": {"seconds_per_run": 300, "storage_mb_per_run": 20, "llm_calls_per_run": 2}
+}

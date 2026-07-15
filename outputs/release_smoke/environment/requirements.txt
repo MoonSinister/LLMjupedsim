@@ -1,0 +1,9 @@
+jupedsim
+jupedsim_visualizer
+shapely
+numpy
+opencv-python
+PyYAML
+matplotlib
+PySide6
+jsonschema

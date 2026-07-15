@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "reference": "outputs/summaries/atc_20121114_reference_metrics.json",
+  "fields": {
+    "duration_seconds": {"weight": 0.25, "continuous": true},
+    "path_length_m": {"weight": 0.25, "continuous": true},
+    "mean_speed_mps": {"weight": 0.20, "continuous": true},
+    "region_visits": {"weight": 0.20, "continuous": false},
+    "slow_ratio": {"weight": 0.10, "continuous": true}
+  },
+  "bootstrap": {"iterations": 500, "confidence": 0.95, "seed": 2026},
+  "weight_sensitivity": [0.5, 1.0, 1.5],
+  "limitations": "ATC and simulation scenes are compared as group distributions; pedestrians are not paired one-to-one."
+}

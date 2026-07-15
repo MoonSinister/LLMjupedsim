@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.jupedsim-mall/schemas/profile.schema.json",
+  "title": "Agent profile",
+  "type": "object",
+  "required": ["schema_version", "profile_id", "role", "desired_speed_mps", "source"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "profile_id": {"type": "string", "minLength": 1},
+    "role": {"enum": ["commuter", "shopper", "staff", "visitor"]},
+    "subtype": {"type": ["string", "null"]},
+    "preferences": {"type": "array", "items": {"type": "string"}},
+    "desired_speed_mps": {"type": "number", "minimum": 0.8, "maximum": 1.8},
+    "default_wait_seconds": {"type": "integer", "minimum": 0, "maximum": 180},
+    "source": {"type": "string", "minLength": 1},
+    "metadata": {"type": "object"}
+  }
+}

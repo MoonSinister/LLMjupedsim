@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "primary_metrics": ["completion_rate", "mean_travel_time_seconds", "mean_path_length_m", "mean_speed_mps", "ttl_removal_rate"],
+  "exploratory_metrics": ["mean_directness", "mean_slow_ratio", "reroute_rate", "exit_entropy", "peak_local_density_per_m2"],
+  "baseline_cell": "B1",
+  "comparison_cells": ["B2", "A1", "M1", "P1", "P2"],
+  "confidence": 0.95,
+  "bootstrap_iterations": 2000,
+  "random_seed": 2026,
+  "multiple_comparison": "holm",
+  "minimum_paired_runs": 5
+}

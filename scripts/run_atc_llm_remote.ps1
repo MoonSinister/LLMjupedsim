@@ -2,22 +2,18 @@ $env:PYTHONUTF8 = "1"
 
 $ProjectRoot = Split-Path -Parent $PSScriptRoot
 
-$PythonExe = "D:\anaconda\envs\python3.12\python.exe"
+$PythonExe = $env:JUPEDSIM_PYTHON
+if (-not $PythonExe) {
+  $PythonExe = Join-Path $ProjectRoot ".venv\Scripts\python.exe"
+}
 if (-not (Test-Path $PythonExe)) {
-  $PythonExe = "C:\Users\MoonSinister\miniconda3\python.exe"
+  $PythonExe = "python"
 }
 
-$AtcProject = Get-ChildItem "D:\AAAWorkSpace\file" -Directory |
-  ForEach-Object { Join-Path $_.FullName "ATC-map" } |
-  Where-Object { Test-Path $_ } |
-  Select-Object -First 1
-
-if (-not $AtcProject) {
-  throw "Could not find ATC-map under D:\AAAWorkSpace\file"
-}
-
-$AtcRawPath = Join-Path $AtcProject "data\raw\atc-tracking-part1"
-$AtcRegions = Join-Path $AtcProject "data\map\localization_grid_regions.json"
+$AtcRawPath = if ($env:ATC_RAW_PATH) { $env:ATC_RAW_PATH } else { Join-Path $ProjectRoot "data\atc-20121114\atc-20121114.csv" }
+$AtcRegions = if ($env:ATC_REGIONS) { $env:ATC_REGIONS } else { Join-Path $ProjectRoot "data\map\localization_grid_regions.json" }
+$LlmBaseUrl = if ($env:LOCAL_LLM_BASE_URL) { $env:LOCAL_LLM_BASE_URL } else { "http://127.0.0.1:8600/v1" }
+$LlmModel = if ($env:LOCAL_LLM_MODEL) { $env:LOCAL_LLM_MODEL } else { "qwen3.6-27b:q8" }
 
 Push-Location $ProjectRoot
 
@@ -56,7 +52,7 @@ Push-Location $ProjectRoot
   --waypoint-distance 1.8 `
   --routing-waypoint-distance 1.4 `
   --routing-waypoint-max-per-leg 8 `
-  --llm-base-url "http://127.0.0.1:8600/v1" `
-  --llm-model "qwen3.6-27b:q8"
+  --llm-base-url $LlmBaseUrl `
+  --llm-model $LlmModel
 
 Pop-Location

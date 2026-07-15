@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "name": "thesis_recovery_v1",
+  "description": "Paired comparison of unreachable-LLM baseline fallback and frozen-plan replay.",
+  "frozen": true,
+  "seeds": [2026, 2027, 2028, 2029, 2030],
+  "cells": [
+    {
+      "id": "RECOVERY_FALLBACK",
+      "scenario": "smoke_baseline",
+      "factors": {"recovery": "ordinary_fallback"},
+      "args": ["--llm-routing", "--llm-base-url", "http://127.0.0.1:1/v1", "--llm-timeout", "0.1", "--llm-max-retries", "0"],
+      "requires_llm": true
+    },
+    {
+      "id": "RECOVERY_REPLAY",
+      "scenario": "smoke_baseline",
+      "factors": {"recovery": "frozen_replay"},
+      "args": ["--replay-plan", "tests/fixtures/replay_smoke_plan.json"],
+      "requires_llm": false
+    }
+  ],
+  "resources": {"max_workers": 2, "max_llm_workers": 1, "max_memory_mb": 4096, "memory_mb_per_run": 1024},
+  "estimates": {"seconds_per_run": 10, "storage_mb_per_run": 5, "llm_calls_per_run": 1}
+}

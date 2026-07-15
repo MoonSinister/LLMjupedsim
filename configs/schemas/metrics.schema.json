@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.jupedsim-mall/schemas/metrics.schema.json",
+  "title": "Per-run experiment metrics",
+  "type": "object",
+  "required": ["schema_version", "run_id", "scenario_name", "seed", "spawned_agents", "completed_agents"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "run_id": {"type": "string", "minLength": 1},
+    "scenario_name": {"type": "string", "minLength": 1},
+    "seed": {"type": "integer", "minimum": 0},
+    "spawned_agents": {"type": "integer", "minimum": 0},
+    "completed_agents": {"type": "integer", "minimum": 0},
+    "ttl_removed_agents": {"type": "integer", "minimum": 0},
+    "failed_agents": {"type": "integer", "minimum": 0},
+    "unfinished_agents": {"type": "integer", "minimum": 0},
+    "metrics": {"type": "object"},
+    "distributions": {"type": "object"},
+    "generated_at": {"type": "string"}
+  }
+}

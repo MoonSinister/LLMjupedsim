@@ -1,0 +1,12 @@
+# Direct dependency versions used to verify batch A on Windows/Python 3.12.
+# jupedsim_visualizer is currently supplied by the JuPedSim environment and
+# does not expose standalone package metadata, so it remains in requirements.txt.
+jupedsim==1.4.2
+shapely==2.1.2
+numpy==2.4.2
+opencv-python==4.13.0.92
+PyYAML==6.0.3
+matplotlib==3.10.8
+PySide6==6.11.0
+jsonschema==4.26.0
+pytest==8.3.5

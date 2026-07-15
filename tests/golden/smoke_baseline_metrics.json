@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "scenario": "smoke_baseline",
+  "seed": 2026,
+  "simulation": {
+    "num_agents": 10,
+    "max_iters": 5000,
+    "movement_model": "avm"
+  },
+  "expected": {
+    "plan_agents": 10,
+    "plan_validation_valid": true,
+    "roles": {
+      "staff": 2,
+      "commuter": 6,
+      "shopper": 2
+    },
+    "exits": {
+      "exit_4": 2,
+      "exit_8": 1,
+      "exit_0": 2,
+      "exit_6": 1,
+      "exit_7": 1,
+      "exit_10": 3
+    },
+    "rerouted_due_to_stuck": 1,
+    "trajectory_agents_observed": 10,
+    "trajectory_frames": 1249,
+    "trajectory_duration_seconds": 49.92,
+    "avg_observed_travel_seconds": 23.052,
+    "avg_path_length_m": 29.727,
+    "avg_observed_speed_mps": 1.337
+  },
+  "tolerances": {
+    "trajectory_frames": 2,
+    "trajectory_duration_seconds": 0.1,
+    "avg_observed_travel_seconds": 0.1,
+    "avg_path_length_m": 0.1,
+    "avg_observed_speed_mps": 0.01
+  }
+}

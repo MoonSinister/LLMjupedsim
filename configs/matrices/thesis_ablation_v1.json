@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "name": "thesis_ablation_v1",
+  "description": "Mechanism ablations paired against the semantic LLM main method.",
+  "frozen": false,
+  "seeds": [2026, 2027, 2028, 2029, 2030],
+  "cells": [
+    {"id": "M1", "scenario": "llm_remote", "factors": {"ablation": "none"}, "requires_llm": true},
+    {"id": "A_NO_SEMANTIC", "scenario": "llm_exit_only", "factors": {"ablation": "no_semantic_activity"}, "requires_llm": true},
+    {"id": "A_NO_WAIT", "scenario": "llm_remote", "factors": {"ablation": "no_waiting"}, "args": ["--disable-activity-waiting"], "requires_llm": true},
+    {"id": "A_NO_ROUTE_WP", "scenario": "llm_remote", "factors": {"ablation": "no_routing_waypoints"}, "args": ["--disable-routing-waypoints"], "requires_llm": true},
+    {"id": "A_NO_REROUTE", "scenario": "llm_remote", "factors": {"ablation": "no_congestion_reroute"}, "args": ["--disable-stuck-reroute"], "requires_llm": true},
+    {"id": "A_HOMOGENEOUS", "scenario": "llm_remote", "factors": {"ablation": "no_profile_variation"}, "args": ["--homogeneous-profiles"], "requires_llm": true}
+  ],
+  "resources": {"max_workers": 2, "max_llm_workers": 1, "max_memory_mb": 8192, "memory_mb_per_run": 2048},
+  "estimates": {"seconds_per_run": 1800, "storage_mb_per_run": 100, "llm_calls_per_run": 8}
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "title": "JuPedSim Mall Experiment Report",
+  "style": {
+    "font_family": "DejaVu Sans",
+    "figure_width_in": 7.2,
+    "figure_height_in": 4.5,
+    "dpi": 180,
+    "formats": ["png", "pdf"],
+    "colors": ["#2364AA", "#3DA35D", "#F4A261", "#D1495B", "#6D597A", "#4D908E"]
+  },
+  "primary_metrics": {
+    "completion_rate": "Completion rate",
+    "mean_travel_time_seconds": "Travel time (s)",
+    "mean_path_length_m": "Path length (m)",
+    "mean_speed_mps": "Mean speed (m/s)"
+  },
+  "realism_metrics": ["duration_seconds", "path_length_m", "mean_speed_mps", "region_visits", "slow_ratio"]
+}

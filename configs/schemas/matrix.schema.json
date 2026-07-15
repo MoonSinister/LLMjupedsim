@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.jupedsim-mall/schemas/matrix.schema.json",
+  "title": "Experiment matrix",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "name", "description", "seeds", "cells", "resources", "estimates"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "name": {"type": "string", "pattern": "^[a-z0-9][a-z0-9_-]*$"},
+    "description": {"type": "string", "minLength": 1},
+    "frozen": {"type": "boolean"},
+    "seeds": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "integer", "minimum": 0}
+    },
+    "cells": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "scenario", "factors"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]*$"},
+          "scenario": {"type": "string", "pattern": "^[a-z0-9][a-z0-9_-]*$"},
+          "enabled": {"type": "boolean"},
+          "factors": {"type": "object"},
+          "args": {"type": "array", "items": {"type": ["string", "number", "integer"]}},
+          "env": {"type": "object", "additionalProperties": {"type": ["string", "number", "integer", "boolean"]}},
+          "requires_llm": {"type": "boolean"}
+        }
+      }
+    },
+    "resources": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["max_workers", "max_llm_workers", "max_memory_mb", "memory_mb_per_run"],
+      "properties": {
+        "max_workers": {"type": "integer", "minimum": 1},
+        "max_llm_workers": {"type": "integer", "minimum": 1},
+        "max_memory_mb": {"type": "integer", "minimum": 256},
+        "memory_mb_per_run": {"type": "integer", "minimum": 128}
+      }
+    },
+    "estimates": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["seconds_per_run", "storage_mb_per_run"],
+      "properties": {
+        "seconds_per_run": {"type": "number", "minimum": 0},
+        "storage_mb_per_run": {"type": "number", "minimum": 0},
+        "llm_calls_per_run": {"type": "number", "minimum": 0}
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "metadata": {"route_policy": "llm_semantic", "purpose": "offline replay and recovery test"},
+  "agents": [
+    {"agent_id": "agent_0001", "exit_idx": 4, "regions": [], "activities": [], "desired_speed_mps": 1.32},
+    {"agent_id": "agent_0002", "exit_idx": 8, "regions": [], "activities": [], "desired_speed_mps": 1.48},
+    {"agent_id": "agent_0003", "exit_idx": 4, "regions": [], "activities": [], "desired_speed_mps": 1.18},
+    {"agent_id": "agent_0004", "exit_idx": 0, "regions": [], "activities": [], "desired_speed_mps": 1.42},
+    {"agent_id": "agent_0005", "exit_idx": 6, "regions": [], "activities": [], "desired_speed_mps": 1.44},
+    {"agent_id": "agent_0006", "exit_idx": 7, "regions": [], "activities": [], "desired_speed_mps": 1.38},
+    {"agent_id": "agent_0007", "exit_idx": 10, "regions": [], "activities": [], "desired_speed_mps": 1.32},
+    {"agent_id": "agent_0008", "exit_idx": 10, "regions": [], "activities": [], "desired_speed_mps": 1.48},
+    {"agent_id": "agent_0009", "exit_idx": 10, "regions": [], "activities": [], "desired_speed_mps": 1.42},
+    {"agent_id": "agent_0010", "exit_idx": 0, "regions": [], "activities": [], "desired_speed_mps": 1.18}
+  ]
+}

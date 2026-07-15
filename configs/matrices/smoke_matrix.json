@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "name": "smoke_matrix",
+  "description": "Two-cell local matrix used to validate orchestration without LLM calls.",
+  "frozen": true,
+  "seeds": [2026],
+  "cells": [
+    {
+      "id": "SMOKE_RANDOM",
+      "scenario": "smoke_baseline",
+      "factors": {"planner": "random"},
+      "requires_llm": false
+    },
+    {
+      "id": "SMOKE_NEAREST",
+      "scenario": "smoke_baseline",
+      "factors": {"planner": "nearest"},
+      "args": ["--baseline-routing", "nearest"],
+      "requires_llm": false
+    }
+  ],
+  "resources": {
+    "max_workers": 2,
+    "max_llm_workers": 1,
+    "max_memory_mb": 4096,
+    "memory_mb_per_run": 1024
+  },
+  "estimates": {
+    "seconds_per_run": 5,
+    "storage_mb_per_run": 5,
+    "llm_calls_per_run": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "outdoor_to_indoor": {
+    "restaurant": "food_service",
+    "food": "food_service",
+    "shop": "retail",
+    "shopping": "retail",
+    "office": "staff_service",
+    "transport": "transit",
+    "station": "transit",
+    "parking": "parking_access",
+    "home": "entrance_exit",
+    "unknown": "general_circulation"
+  }
+}

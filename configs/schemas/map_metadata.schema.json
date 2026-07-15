@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.jupedsim-mall/schemas/map_metadata.schema.json",
+  "title": "Semantic map metadata",
+  "type": "object",
+  "required": ["schema_version", "map_id", "geometry", "stages", "regions"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "map_id": {"type": "string", "minLength": 1},
+    "coordinate_unit": {"enum": ["m", "mm", "pixel"]},
+    "geometry": {"type": "string", "minLength": 1},
+    "stages": {"type": "string", "minLength": 1},
+    "regions": {"type": "string", "minLength": 1},
+    "file_hashes": {"type": "object", "additionalProperties": {"type": ["string", "null"]}}
+  }
+}

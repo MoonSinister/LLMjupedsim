@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "reference_date": "2012-11-14",
+  "atc_raw_path": "data/atc-20121114/atc-20121114.csv",
+  "expected_raw_sha256": "52f147bc95c829ca17cd76e8d078428bba3f5ff19913962737815598f812046",
+  "atc_regions": "data/map/localization_grid_regions.json",
+  "expected_regions_sha256": "8a0185feae2d00acde00b18048e74b2d80ac3d1040eed0b8630080aacebd7af9",
+  "max_persons": 200,
+  "max_rows": 0,
+  "min_points": 300,
+  "sampling_seed": 2026,
+  "partition": "evaluation",
+  "partition_rule": "sha256(person_id)[0:8] modulo 10; evaluation=0, tuning=1, train=2..9",
+  "binning": {
+    "duration_seconds": {"bin_size": 30, "max_value": 300, "unit": "s"},
+    "path_length_m": {"bin_size": 5, "max_value": 80, "unit": "m"},
+    "mean_speed_mps": {"bin_size": 0.25, "max_value": 2.5, "unit": "m/s"},
+    "slow_ratio": {"bin_size": 0.1, "max_value": 1.0, "unit": "ratio"}
+  },
+  "output": "outputs/summaries/atc_reference_20121114_metrics.json"
+}

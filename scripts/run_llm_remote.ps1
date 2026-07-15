@@ -3,7 +3,18 @@ $env:PYTHONUTF8 = "1"
 $ProjectRoot = Split-Path -Parent $PSScriptRoot
 Push-Location $ProjectRoot
 
-& "D:\anaconda\envs\python3.12\python.exe" "src\demo_map_simulation.py" `
+$PythonExe = $env:JUPEDSIM_PYTHON
+if (-not $PythonExe) {
+  $PythonExe = Join-Path $ProjectRoot ".venv\Scripts\python.exe"
+}
+if (-not (Test-Path $PythonExe)) {
+  $PythonExe = "python"
+}
+
+$LlmBaseUrl = if ($env:LOCAL_LLM_BASE_URL) { $env:LOCAL_LLM_BASE_URL } else { "http://127.0.0.1:8600/v1" }
+$LlmModel = if ($env:LOCAL_LLM_MODEL) { $env:LOCAL_LLM_MODEL } else { "qwen3.6-27b:q8" }
+
+& $PythonExe "src\demo_map_simulation.py" `
   -n 200 `
   --spawn-interval 300 `
   --spawn-jitter 180 `
@@ -32,7 +43,7 @@ Push-Location $ProjectRoot
   --waypoint-distance 1.8 `
   --routing-waypoint-distance 1.4 `
   --routing-waypoint-max-per-leg 8 `
-  --llm-base-url "http://127.0.0.1:8600/v1" `
-  --llm-model "qwen3.6-27b:q8"
+  --llm-base-url $LlmBaseUrl `
+  --llm-model $LlmModel
 
 Pop-Location

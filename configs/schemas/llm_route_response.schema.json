@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.jupedsim-mall/schemas/llm_route_response.schema.json",
+  "title": "LLM route planning response",
+  "type": "object",
+  "required": ["plans"],
+  "additionalProperties": true,
+  "properties": {
+    "plans": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["agent_id"],
+        "anyOf": [
+          {"required": ["final_exit"]},
+          {"required": ["exit"]}
+        ],
+        "properties": {
+          "agent_id": {"type": "string", "minLength": 1},
+          "final_exit": {"type": "string", "minLength": 1},
+          "exit": {"type": "string", "minLength": 1},
+          "role": {"enum": ["commuter", "shopper", "staff", "visitor"]},
+          "subtype": {"type": ["string", "null"]},
+          "intent": {"type": "string"},
+          "desired_speed_mps": {"type": "number", "minimum": 0.8, "maximum": 1.8},
+          "regions": {"type": "array", "items": {"type": "string"}},
+          "activities": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["region"],
+              "properties": {
+                "region": {"type": "string", "minLength": 1},
+                "action": {"type": "string"},
+                "wait_seconds": {"type": "number", "minimum": 0, "maximum": 180}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

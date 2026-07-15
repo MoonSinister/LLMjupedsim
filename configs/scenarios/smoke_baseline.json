@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "name": "smoke_baseline",
+  "description": "Small no-LLM run used to verify geometry, spawn areas, and JuPedSim integration.",
+  "enabled": true,
+  "args": [
+    "-n", "10",
+    "--max-iters", "5000",
+    "--movement-model", "avm",
+    "--output", "outputs/smoke/demo_map_smoke.sqlite",
+    "--llm-plan-output", "outputs/plans/smoke_baseline_plan.json"
+  ]
+}

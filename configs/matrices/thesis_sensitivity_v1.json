@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "name": "thesis_sensitivity_v1",
+  "description": "One-factor-at-a-time sensitivity levels around the semantic LLM main method.",
+  "frozen": false,
+  "seeds": [2026, 2027, 2028],
+  "cells": [
+    {"id": "N80", "scenario": "llm_remote", "factors": {"parameter": "num_agents", "level": 80}, "args": ["-n", "80"], "requires_llm": true},
+    {"id": "N120", "scenario": "llm_remote", "factors": {"parameter": "num_agents", "level": 120}, "args": ["-n", "120"], "requires_llm": true},
+    {"id": "N200", "scenario": "llm_remote", "factors": {"parameter": "num_agents", "level": 200}, "args": ["-n", "200"], "requires_llm": true},
+    {"id": "ACTIVE50", "scenario": "llm_remote", "factors": {"parameter": "max_active", "level": 50}, "args": ["--max-active-agents", "50"], "requires_llm": true},
+    {"id": "ACTIVE70", "scenario": "llm_remote", "factors": {"parameter": "max_active", "level": 70}, "args": ["--max-active-agents", "70"], "requires_llm": true},
+    {"id": "ACTIVE90", "scenario": "llm_remote", "factors": {"parameter": "max_active", "level": 90}, "args": ["--max-active-agents", "90"], "requires_llm": true},
+    {"id": "WP12", "scenario": "llm_remote", "factors": {"parameter": "waypoint_distance", "level": 1.2}, "args": ["--waypoint-distance", "1.2"], "requires_llm": true},
+    {"id": "WP18", "scenario": "llm_remote", "factors": {"parameter": "waypoint_distance", "level": 1.8}, "args": ["--waypoint-distance", "1.8"], "requires_llm": true},
+    {"id": "WP24", "scenario": "llm_remote", "factors": {"parameter": "waypoint_distance", "level": 2.4}, "args": ["--waypoint-distance", "2.4"], "requires_llm": true},
+    {"id": "TTL180", "scenario": "llm_remote", "factors": {"parameter": "ttl_seconds", "level": 180}, "args": ["--agent-max-lifetime-seconds", "180"], "requires_llm": true},
+    {"id": "TTL240", "scenario": "llm_remote", "factors": {"parameter": "ttl_seconds", "level": 240}, "args": ["--agent-max-lifetime-seconds", "240"], "requires_llm": true},
+    {"id": "TTL300", "scenario": "llm_remote", "factors": {"parameter": "ttl_seconds", "level": 300}, "args": ["--agent-max-lifetime-seconds", "300"], "requires_llm": true},
+    {"id": "MODEL_AVM", "scenario": "llm_remote", "factors": {"parameter": "movement_model", "level": "avm"}, "args": ["--movement-model", "avm"], "requires_llm": true},
+    {"id": "MODEL_CFSV3", "scenario": "llm_remote", "factors": {"parameter": "movement_model", "level": "cfsv3"}, "args": ["--movement-model", "cfsv3"], "requires_llm": true},
+    {"id": "BATCH10", "scenario": "llm_remote", "factors": {"parameter": "llm_batch_size", "level": 10}, "args": ["--llm-batch-size", "10"], "requires_llm": true},
+    {"id": "BATCH25", "scenario": "llm_remote", "factors": {"parameter": "llm_batch_size", "level": 25}, "args": ["--llm-batch-size", "25"], "requires_llm": true},
+    {"id": "BATCH50", "scenario": "llm_remote", "factors": {"parameter": "llm_batch_size", "level": 50}, "args": ["--llm-batch-size", "50"], "requires_llm": true},
+    {"id": "TEMP0", "scenario": "llm_remote", "factors": {"parameter": "llm_temperature", "level": 0.0}, "args": ["--llm-temperature", "0.0"], "requires_llm": true},
+    {"id": "TEMP01", "scenario": "llm_remote", "factors": {"parameter": "llm_temperature", "level": 0.1}, "args": ["--llm-temperature", "0.1"], "requires_llm": true},
+    {"id": "TEMP03", "scenario": "llm_remote", "factors": {"parameter": "llm_temperature", "level": 0.3}, "args": ["--llm-temperature", "0.3"], "requires_llm": true}
+  ],
+  "resources": {"max_workers": 2, "max_llm_workers": 1, "max_memory_mb": 8192, "memory_mb_per_run": 2048},
+  "estimates": {"seconds_per_run": 1800, "storage_mb_per_run": 100, "llm_calls_per_run": 8}
+}

@@ -1,0 +1,15 @@
+{
+  "map": {
+    "resolution": 0.1,
+    "origin": [0.0, 0.0, 0.0],
+    "width": 100,
+    "height": 100
+  },
+  "regions": [
+    {
+      "name": "region_1",
+      "description": "central test region",
+      "points_world": [[4, 4], [6, 4], [6, 6], [4, 6], [4, 4]]
+    }
+  ]
+}

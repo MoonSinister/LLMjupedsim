@@ -18,16 +18,17 @@ cd D:\AAAWorkSpace\code\Jupedsim
 ```text
 .
 |-- src/                         # Python source code
-|   |-- demo_map_simulation.py    # Main simulation entry
-|   |-- demo_visualize.py         # Opens a SQLite trajectory in jupedsim_visualizer
-|   |-- agent_model.py            # Agent IDs, profile queue, fallback routing
-|   |-- llm_prompts.py            # LLM routing prompt/schema
-|   |-- llmob_adapter.py          # Built-in mall personas
-|   |-- llmob_training_adapter.py # LLMob/ATC profile extraction
-|   |-- manual_draw_geometry.py   # Interactive map/stage editor
-|   |-- geometry_editor.py        # Geometry editing helper
-|   |-- pgm_to_geometry.py        # Convert PGM map to geometry
-|   `-- plot_free_points.py       # Inspect/edit localization free points
+|   |-- jupedsim_mall/            # Main Python package
+|   |   |-- simulation/           # JuPedSim execution
+|   |   |-- geometry/             # Map editing and conversion
+|   |   |-- profiles/             # Mall/ATC/LLMob profiles
+|   |   |-- planning/             # LLM prompts and route planning
+|   |   |-- experiments/          # Scenario validation and batch runs
+|   |   `-- analysis/             # Metrics and realism evaluation
+|   `-- *.py                      # Backward-compatible script entry points
+|-- configs/
+|   |-- scenarios/                # Reproducible experiment scenarios
+|   `-- schemas/                  # Versioned JSON Schemas
 |-- scripts/                      # PowerShell launch scripts
 |   |-- run_llm_remote.ps1        # LLM-routed mall simulation
 |   `-- run_atc_llm_remote.ps1    # ATC-profile + LLM-routed simulation
@@ -39,23 +40,37 @@ cd D:\AAAWorkSpace\code\Jupedsim
 |       |-- drawn_geometry.json
 |       `-- localization_grid.pgm
 |-- outputs/
+|   |-- runs/<run_id>/            # Isolated run artifacts and manifest
 |   |-- trajectories/             # Main SQLite trajectory outputs
 |   |-- plans/                    # LLM per-agent intent/route plans
 |   |-- profiles/                 # ATC/LLMob extracted profile caches
 |   `-- smoke/                    # Small test/smoke output files
 |-- docs/assets/                  # Figures and documentation assets
-`-- jupedsim/                     # Upstream JuPedSim source checkout
+|-- jupedsim/                     # Upstream JuPedSim source checkout
+|-- tests/                        # Unit, integration, fixture, and golden tests
+`-- pyproject.toml                # Package metadata and unified CLI
 ```
 
 ## Environment
 
-The scripts assume Python is available at:
+Install the Python dependencies from the project root:
 
 ```powershell
-D:\anaconda\envs\python3.12\python.exe
+python -m pip install -r requirements.txt
 ```
 
-The project currently uses packages such as `jupedsim`, `shapely`, and plotting/GUI dependencies used by the map tools.
+The exact direct dependency versions used for the batch-A baseline are recorded
+in `requirements-lock.txt`.
+
+By default, the PowerShell scripts first use `JUPEDSIM_PYTHON` when it is set,
+then fall back to `.venv\Scripts\python.exe`, and finally
+to `python` on `PATH`.
+
+Example:
+
+```powershell
+$env:JUPEDSIM_PYTHON='D:\anaconda\envs\python3.12\python.exe'
+```
 
 ## Remote LLM Setup
 
@@ -77,7 +92,110 @@ Current model name:
 qwen3.6-27b:q8
 ```
 
+The scripts can be configured without editing files:
+
+```powershell
+$env:LOCAL_LLM_BASE_URL='http://127.0.0.1:8600/v1'
+$env:LOCAL_LLM_MODEL='qwen3.6-27b:q8'
+```
+
+For ATC-profile runs, the repository sample is used by default. Set
+`ATC_RAW_PATH` and optionally `ATC_REGIONS` to use a larger external dataset.
+
 ## Run Simulations
+
+The package provides a unified command line interface. When the package has not
+been installed in editable mode, set `PYTHONPATH=src` or continue to use the
+compatible scripts shown below.
+
+```powershell
+$env:PYTHONPATH='src'
+python -m jupedsim_mall doctor
+python -m jupedsim_mall scenarios list
+python -m jupedsim_mall scenarios validate
+python -m jupedsim_mall map validate --map data/map `
+  --output outputs/datasets/map_quality_report.json `
+  --preview outputs/datasets/map_quality_preview.png
+python -m jupedsim_mall run --dry-run smoke_baseline
+python -m jupedsim_mall run smoke_baseline
+python -m jupedsim_mall runs verify outputs/runs
+```
+
+Prepare and audit a paired-seed experiment matrix before launching it:
+
+```powershell
+python -m jupedsim_mall matrix prepare configs/matrices/thesis_core_v1.json
+python -m jupedsim_mall matrix run outputs/matrices/thesis_core_v1/<fingerprint>/plan.json --dry-run
+python -m jupedsim_mall matrix run outputs/matrices/thesis_core_v1/<fingerprint>/plan.json
+python -m jupedsim_mall matrix status outputs/matrices/thesis_core_v1/<fingerprint>/plan.json
+python -m jupedsim_mall matrix resume outputs/matrices/thesis_core_v1/<fingerprint>/plan.json --retry-failed
+python -m jupedsim_mall matrix cancel-local outputs/matrices/thesis_core_v1/<fingerprint>/plan.json
+```
+
+Run the complete analysis chain for an already completed plan, or add `--run`
+to execute the matrix first:
+
+```powershell
+python -m jupedsim_mall pipeline outputs/matrices/<name>/<fingerprint>/plan.json `
+  --reference outputs/summaries/atc_reference_20121114_metrics.json `
+  --output-dir outputs/formal-analysis
+```
+
+Before a formal batch, run the full gate and freeze an immutable snapshot:
+
+```powershell
+python -m jupedsim_mall quality-gate
+python -m jupedsim_mall experiment preflight configs/matrices/thesis_core_v1.json --check-llm
+python -m jupedsim_mall experiment freeze configs/matrices/thesis_core_v1.json --check-llm
+```
+
+Matrix plans use stable fingerprints and frozen seed lists. Completed runs with
+matching fingerprints are skipped during resume. Failed attempts remain in the
+plan history, while retries receive new run IDs. CPU concurrency is capped by
+the configured worker and memory budgets; LLM runs have a separate concurrency
+limit. Cancellation is cooperative so active SQLite writers can close cleanly.
+
+Prepare an external profile source without starting a simulation:
+
+```powershell
+python -m jupedsim_mall profiles prepare `
+  --source atc `
+  --data-path data/atc-20121114/atc-20121114.csv `
+  --regions data/map/localization_grid_regions.json `
+  --max-persons 50 `
+  --cache-output outputs/profiles/atc_profiles.json `
+  --report-output outputs/datasets/atc_profile_report.json
+```
+
+List reproducible scenario configs:
+
+```powershell
+.\scripts\run_scenario.ps1 --list
+```
+
+Dry-run two scenarios without starting simulation:
+
+```powershell
+.\scripts\run_scenario.ps1 --dry-run baseline_random llm_remote
+```
+
+Validate scenario JSON files before running a large experiment batch:
+
+```powershell
+D:\anaconda\envs\python3.12\python.exe src\validate_scenarios.py
+```
+
+Run repeated experiments with controlled seeds:
+
+```powershell
+.\scripts\run_scenario.ps1 --repeat 5 --seed-start 2026 baseline_random baseline_nearest llm_exit_only llm_remote
+```
+
+Run a configured smoke test:
+
+```powershell
+.\scripts\run_scenario.ps1 smoke_baseline
+```
 
 Run the standard LLM-routed simulation:
 
@@ -91,6 +209,14 @@ Run the ATC-profile-based LLM simulation:
 .\scripts\run_atc_llm_remote.ps1
 ```
 
+Run the disabled-by-default LLMob-profile scenario after setting the LLMob data
+root if the default path is not available:
+
+```powershell
+$env:LLMOB_DATA_ROOT='D:\AAAWorkSpace\code\LLMob\LLMob\data'
+.\scripts\run_scenario.ps1 --include-disabled llmob_llm_remote
+```
+
 Run a small no-LLM smoke test:
 
 ```powershell
@@ -102,19 +228,118 @@ D:\anaconda\envs\python3.12\python.exe src\demo_map_simulation.py `
   --output outputs\smoke\demo_map_smoke.sqlite
 ```
 
+Replay a saved plan without contacting the LLM service:
+
+```powershell
+python src/demo_map_simulation.py `
+  -n 10 --seed 2026 --max-iters 5000 `
+  --replay-plan outputs/plans/smoke_baseline_plan_seed2026_run01.json `
+  --output outputs/smoke/replay.sqlite `
+  --llm-plan-output outputs/smoke/replay_plan.json
+```
+
+LLM planning responses are cached under `outputs/llm_cache` by default. Call
+metadata, prompt hashes, token usage, latency, retries, and failures are written
+to `outputs/runs/llm_calls.jsonl`.
+
 ## Outputs
 
-Important output files:
+Configured runs now write all related artifacts into one
+`outputs/runs/<scenario>_seed<seed>_<timestamp>_<hash>/` directory:
 
-- `outputs/trajectories/*.sqlite`: JuPedSim trajectories for visualization.
-- `outputs/plans/*.json`: per-agent LLM plans, including role, subtype, intent, activities, target regions, final exit, TTL removal status, and reroute records.
-- `outputs/profiles/*.json`: profile caches generated from ATC or LLMob data.
-- `outputs/smoke/*.sqlite`: short test runs.
+- `trajectory.sqlite`: JuPedSim trajectory database.
+- `plans.json`: agent profiles, routes, activities, reroutes and terminal states.
+- `events.jsonl`: spawn, wait, reroute, completion and removal events.
+- `llm_calls.jsonl`: LLM requests, cache hits, latency and failures when applicable.
+- `resolved_scenario.json`: complete resolved arguments, environment and seed.
+- `run.log`: combined simulation stdout/stderr.
+- `manifest.json`: status, timings, hashes, versions and artifact index.
+
+The parent `outputs/runs/experiment_manifest_*.json` files index batches.
+Use `run --legacy-output-layout` only when an older script still depends on
+scenario-configured output paths.
 
 Visualize a trajectory:
 
 ```powershell
 D:\anaconda\envs\python3.12\python.exe src\demo_visualize.py outputs\trajectories\demo_map_llm_remote.sqlite
+```
+
+Summarize experiment artifacts for tables:
+
+```powershell
+D:\anaconda\envs\python3.12\python.exe src\experiment_summary.py
+```
+
+Equivalent package command:
+
+```powershell
+python -m jupedsim_mall summarize
+```
+
+Build ATC reference metrics for realism evaluation:
+
+```powershell
+python -m jupedsim_mall atc-reference --config configs/data/atc_reference_20121114.json
+
+D:\anaconda\envs\python3.12\python.exe src\atc_reference.py `
+  --atc-raw-path "$env:ATC_RAW_PATH" `
+  --atc-regions "$env:ATC_REGIONS" `
+  --output outputs\summaries\atc_reference_metrics.json
+```
+
+Evaluate simulation realism against the ATC reference:
+
+```powershell
+D:\anaconda\envs\python3.12\python.exe src\realism_evaluation.py `
+  --reference outputs\summaries\atc_reference_metrics.json `
+  --sim outputs\trajectories\demo_map_llm_remote.sqlite
+```
+
+The equivalent package commands are `python -m jupedsim_mall atc-reference`
+and `python -m jupedsim_mall realism`, followed by the same options.
+
+Build and verify a portable reproduction package after reporting:
+
+```powershell
+python -m jupedsim_mall release build --output release `
+  --plan outputs/matrices/<name>/<fingerprint>/plan.json `
+  --report-dir outputs/formal-analysis/report
+python -m jupedsim_mall release verify release
+```
+
+The summary command writes both per-artifact metrics and cross-run aggregate
+metrics, including plan validation status, TTL removal rate, reroute rate, exit
+distribution, observed trajectory duration, and mean/std values for repeated
+runs. It also writes baseline-comparison JSD metrics:
+
+```text
+outputs/summaries/experiment_summary_comparison.json
+outputs/summaries/experiment_summary_comparison.csv
+```
+
+The graduation-design workflow is documented in:
+
+```text
+docs/research_and_design_workflow.md
+```
+
+The engineering refactor and technical route are documented in:
+
+```text
+docs/engineering_technical_route.md
+```
+
+The academic experiment pipeline is documented in:
+
+```text
+docs/academic_experiment_pipeline.md
+```
+
+The staged implementation checklist is documented in:
+
+```text
+docs/full_experiment_pipeline_implementation_plan.md
 ```
 
 ## Map Editing

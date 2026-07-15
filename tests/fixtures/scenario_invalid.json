@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "name": "wrong_name",
+  "description": "Invalid fixture.",
+  "enabled": true,
+  "args": [
+    "-n", "0",
+    "--movement-model", "teleport",
+    "--llm-routing",
+    "--output", "outputs/smoke/fixture.json"
+  ]
+}
