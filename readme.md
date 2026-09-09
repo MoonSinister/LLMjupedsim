@@ -59,6 +59,46 @@ Install the Python dependencies from the project root:
 python -m pip install -r requirements.txt
 ```
 
+## One-click Start
+
+On Windows, double-click `start.bat` from the project root to run the default
+120-agent `baseline_random` scenario. The launcher selects Python in this order: `JUPEDSIM_PYTHON`,
+`.venv\Scripts\python.exe`, `D:\anaconda\envs\python3.12\python.exe`, then
+`python` on `PATH`.
+
+Command-line examples:
+
+```powershell
+.\start.bat
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\start.ps1 -Agents 200
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\start.ps1 -DryRun
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\start.ps1 -List
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\start.ps1 -Scenario baseline_random
+```
+
+After a run finishes, double-click `visualize.bat` to open the newest
+`trajectory.sqlite` in the JuPedSim visualizer. You can also choose a specific
+trajectory:
+
+```powershell
+.\visualize.bat
+.\visualize.bat -Path outputs\runs\<run_id>\trajectory.sqlite
+```
+
+For presentation, double-click `visualize_3d.bat` to export the newest
+trajectory as an interactive Three.js browser replay:
+
+```powershell
+.\visualize_3d.bat
+.\visualize_3d.bat -MaxAgents 300 -FrameStride 10
+.\visualize_3d.bat -Path outputs\runs\<run_id>\trajectory.sqlite
+```
+
+The exported page is written to `outputs\visualizations\latest_3d_replay.html`.
+Use `visualize_3d.bat` to open it because the launcher serves the page from a
+local `http://127.0.0.1` address; opening the HTML directly as `file://` may
+trigger browser module-security errors.
+
 The exact direct dependency versions used for the batch-A baseline are recorded
 in `requirements-lock.txt`.
 

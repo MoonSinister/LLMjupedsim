@@ -37,6 +37,22 @@ def test_run_dry_run_builds_legacy_compatible_command(tmp_path, capsys):
     assert "--event-output" in run_manifest["command"]
 
 
+def test_run_dry_run_can_override_agent_count(tmp_path, capsys):
+    assert main([
+        "run",
+        "--dry-run",
+        "--num-agents",
+        "200",
+        "--manifest-dir",
+        str(tmp_path),
+        "baseline_random",
+    ]) == 0
+    capsys.readouterr()
+    run_manifest = json.loads(next(tmp_path.glob("*/manifest.json")).read_text(encoding="utf-8"))
+    command = run_manifest["command"]
+    assert command[command.index("-n") + 1] == "200"
+
+
 def test_profile_prepare_reports_fallback_for_missing_source(tmp_path, capsys):
     assert main([
         "profiles",

@@ -235,8 +235,17 @@ def rewrite_outputs_for_repeat(items: list[str], suffix: str) -> list[str]:
     return result
 
 
-def scenario_args_for_run(scenario: dict, seed: int, repeat_index: int, repeat_total: int) -> list[str]:
+def scenario_args_for_run(
+    scenario: dict,
+    seed: int,
+    repeat_index: int,
+    repeat_total: int,
+    *,
+    num_agents: int | None = None,
+) -> list[str]:
     items = [str(item) for item in scenario.get("args", [])]
+    if num_agents is not None:
+        items = set_option(items, "-n", str(num_agents))
     items = set_option(items, "--seed", str(seed))
     if repeat_total > 1:
         items = rewrite_outputs_for_repeat(items, f"seed{seed}_run{repeat_index:02d}")
@@ -285,7 +294,13 @@ def run_scenario(
         scenario["args"] = [*scenario.get("args", []), *scenario_override.get("args", [])]
         scenario["env"] = {**scenario.get("env", {}), **scenario_override.get("env", {})}
     python_exe = args.python or os.environ.get("JUPEDSIM_PYTHON") or sys.executable
-    scenario_args = scenario_args_for_run(scenario, seed, repeat_index, args.repeat)
+    scenario_args = scenario_args_for_run(
+        scenario,
+        seed,
+        repeat_index,
+        args.repeat,
+        num_agents=getattr(args, "num_agents", None),
+    )
     run_id = make_run_id(scenario, seed, repeat_index)
     run_dir = args.manifest_dir / run_id
     artifacts = {}
@@ -390,6 +405,7 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--stop-on-failure", action="store_true")
     parser.add_argument("--repeat", type=int, default=1, help="Repeat each selected scenario N times.")
     parser.add_argument("--seed-start", type=int, default=2026, help="First seed used for repeated runs.")
+    parser.add_argument("--num-agents", type=int, help="Override the configured number of pedestrians.")
     parser.add_argument(
         "--legacy-output-layout",
         action="store_true",
@@ -413,6 +429,8 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     if args.repeat < 1:
         raise SystemExit("--repeat must be >= 1")
+    if args.num_agents is not None and args.num_agents < 1:
+        raise SystemExit("--num-agents must be >= 1")
 
     records = []
     for repeat_index in range(1, args.repeat + 1):
